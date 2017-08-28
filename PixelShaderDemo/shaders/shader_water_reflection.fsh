@@ -1,13 +1,12 @@
-
-void main( void )
-{
+void main(void) {
+    
     float time = u_time * .5;
     vec2 sp = gl_FragCoord.xy / size.xy;
     vec2 p = sp * 6.0 - 20.0;
     vec2 i = p;
     float c = 1.0;
     float inten = .05;
-    for (int n = 0; n < 5; n++)
+    for (int n = 0; n < iterations; n++)
     {
         float t = time * (1.0 - (3.5 / float(n+1)));
         i = p + vec2(cos(t - i.x) + sin(t + i.y), sin(t - i.y) + cos(t + i.x));
