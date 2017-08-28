@@ -116,6 +116,7 @@ class GameScene: SKScene {
     
     private func createShanderContainer() -> SKSpriteNode {
         
+        return SKSpriteNode()
     }
     
     private func createMovementShader() {
