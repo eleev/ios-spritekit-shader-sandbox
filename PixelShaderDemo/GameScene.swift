@@ -14,14 +14,37 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
+    
+    
+    // MARK: - Lifecycle
+    
     override func didMove(to view: SKView) {
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
+        let width = self.frame.size.width
+        let height = self.frame.size.height
+        let position = CGPoint(x: width / 2, y: height / 2)
+        let size = CGSize(width: width, height: height)
+        
+        // Create a container sprite for the shader that makes the movement
+        let shaderContainerMovement = SKSpriteNode(imageNamed: "dummypixel.png")
+        shaderContainerMovement.position = position
+        shaderContainerMovement.size = size
+        self.addChild(shaderContainerMovement)
+        
+        // Create a movement shader from a shader file
+        let multiplier: CGFloat = 1.5
+        let x: Float = Float(self.frame.size.width * multiplier)
+        let y: Float = Float(self.frame.size.height * multiplier)
+        let movementVector: float3 = float3([x, y, 0])
+        
+        let shaderMove = SKShader(fileNamed: "shader_water_movement.fsh")
+        shaderMove.uniforms = [
+            SKUniform(name: "size", vectorFloat3: movementVector),
+            SKUniform(name: "customTexture", texture: SKTexture(imageNamed: "sand.png"))
+        ]
+        shaderContainerMovement.shader = shaderMove
+        
+        
         
         // Create shape node to use during mouse interaction
         let w = (self.size.width + self.size.height) * 0.05
@@ -37,6 +60,12 @@ class GameScene: SKScene {
         }
     }
     
+    
+    override func update(_ currentTime: TimeInterval) {
+        // Called before each frame is rendered
+    }
+    
+    // MARK: - Touch handling
     
     func touchDown(atPoint pos : CGPoint) {
         if let n = self.spinnyNode?.copy() as! SKShapeNode? {
@@ -81,9 +110,20 @@ class GameScene: SKScene {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
+ 
     
+    // MARK: - Utility
     
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+    private func createShanderContainer() -> SKSpriteNode {
+        
     }
+    
+    private func createMovementShader() {
+        
+    }
+    
+    private func createReflectionShader() {
+        
+    }
+    
 }
