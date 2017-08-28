@@ -15,49 +15,32 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
     
-    
     // MARK: - Lifecycle
     
     override func didMove(to view: SKView) {
         
-        let width = self.frame.size.width
-        let height = self.frame.size.height
-        let position = CGPoint(x: width / 2, y: height / 2)
-        let size = CGSize(width: width, height: height)
-        
-        // Create a container sprite for the shader that makes the movement
-        let shaderContainerMovement = SKSpriteNode(imageNamed: "dummypixel.png")
-        shaderContainerMovement.position = position
-        shaderContainerMovement.size = size
-        self.addChild(shaderContainerMovement)
-        
+        let shaderContainerMovement = createShaderContainer()
         // Create a movement shader from a shader file
-        let multiplier: CGFloat = 1.5
-        let x: Float = Float(self.frame.size.width * multiplier)
-        let y: Float = Float(self.frame.size.height * multiplier)
-        let movementVector: float3 = float3([x, y, 0])
+        createMovementShader(shaderContainerMovement)
         
-        let shaderMove = SKShader(fileNamed: "shader_water_movement.fsh")
-        shaderMove.uniforms = [
-            SKUniform(name: "size", vectorFloat3: movementVector),
-            SKUniform(name: "customTexture", texture: SKTexture(imageNamed: "sand.png"))
-        ]
-        shaderContainerMovement.shader = shaderMove
+        // Createa a relfection shader from a shader file
+        let shaderContainerReflection = createShaderContainer()
+        createReflectionShader(shaderContainerReflection)
         
+        createBeach()
         
-        
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
+//        // Create shape node to use during mouse interaction
+//        let w = (self.size.width + self.size.height) * 0.05
+//        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+//        
+//        if let spinnyNode = self.spinnyNode {
+//            spinnyNode.lineWidth = 2.5
+//            
+//            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
+//            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
+//                                              SKAction.fadeOut(withDuration: 0.5),
+//                                              SKAction.removeFromParent()]))
+//        }
     }
     
     
@@ -114,17 +97,51 @@ class GameScene: SKScene {
     
     // MARK: - Utility
     
-    private func createShanderContainer() -> SKSpriteNode {
+    private func createShaderContainer(from imageNamed: String = "dummypixel.png") -> SKSpriteNode {
+        let width = self.frame.size.width
+        let height = self.frame.size.height
+        let position = CGPoint(x: width / 2, y: height / 2)
+        let size = CGSize(width: width, height: height)
         
-        return SKSpriteNode()
+        // Create a container sprite for the shader that makes the movement
+        let shaderContainer = SKSpriteNode(imageNamed: imageNamed)
+        shaderContainer.position = position
+        shaderContainer.size = size
+        self.addChild(shaderContainer)
+        return shaderContainer
     }
     
-    private func createMovementShader() {
+    private func createMovementShader(_ shaderContainer: SKSpriteNode) {
+        let multiplier: CGFloat = 1.5
+        let x: Float = Float(self.frame.size.width * multiplier)
+        let y: Float = Float(self.frame.size.height * multiplier)
+        let movementVector: float3 = float3([x, y, 0])
         
+        let moveShader = SKShader(fileNamed: "shader_water_movement.fsh")
+        moveShader.uniforms = [
+            SKUniform(name: "size", vectorFloat3: movementVector),
+            SKUniform(name: "customTexture", texture: SKTexture(imageNamed: "sand.png"))
+        ]
+        shaderContainer.shader = moveShader
     }
     
-    private func createReflectionShader() {
+    private func createReflectionShader(_ shaderContainer: SKSpriteNode) {
+        let x: Float = Float(self.frame.size.width)
+        let y: Float = Float(self.frame.size.height)
+        let reflectionVector: float3 = float3([x, y, 0])
         
+        let reflectShader = SKShader(fileNamed: "shader_water_reflection.fsh")
+        reflectShader.uniforms = [
+            SKUniform(name: "size", vectorFloat3: reflectionVector)
+        ]
+        shaderContainer.shader = reflectShader
+    }
+    
+    private func createBeach() {
+        let beach = SKSpriteNode(imageNamed: "beach.png")
+        beach.size = self.size
+        beach.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
+        self.addChild(beach)
     }
     
 }
