@@ -135,7 +135,7 @@ class GameScene: SKScene {
         let reflectShader = SKShader(fileNamed: "shader_water_reflection.fsh")
         reflectShader.uniforms = [
             SKUniform(name: "size", vectorFloat3: reflectionVector),
-            SKUniform(name: "iterations", float: 3)
+            SKUniform(name: "iterations", float: 4)
         ]
         shaderContainer.shader = reflectShader
     }
