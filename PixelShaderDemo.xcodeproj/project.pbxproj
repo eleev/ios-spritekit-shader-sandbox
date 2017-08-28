@@ -17,6 +17,9 @@
 		A9BFCB0B1F542788008FCF4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB091F542788008FCF4E /* LaunchScreen.storyboard */; };
 		A9BFCB161F542788008FCF4E /* PixelShaderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCB151F542788008FCF4E /* PixelShaderDemoTests.swift */; };
 		A9BFCB211F542788008FCF4E /* PixelShaderDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCB201F542788008FCF4E /* PixelShaderDemoUITests.swift */; };
+		A9BFCB321F543955008FCF4E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB311F543955008FCF4E /* .gitignore */; };
+		A9BFCB331F543CB0008FCF4E /* shader_water_movement.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB2F1F54391A008FCF4E /* shader_water_movement.fsh */; };
+		A9BFCB341F543CB0008FCF4E /* shader_water_reflection.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB301F54391A008FCF4E /* shader_water_reflection.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		A9BFCB1C1F542788008FCF4E /* PixelShaderDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelShaderDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCB201F542788008FCF4E /* PixelShaderDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelShaderDemoUITests.swift; sourceTree = "<group>"; };
 		A9BFCB221F542788008FCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9BFCB2F1F54391A008FCF4E /* shader_water_movement.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader_water_movement.fsh; sourceTree = "<group>"; };
+		A9BFCB301F54391A008FCF4E /* shader_water_reflection.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader_water_reflection.fsh; sourceTree = "<group>"; };
+		A9BFCB311F543955008FCF4E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		A9BFCAEE1F542788008FCF4E = {
 			isa = PBXGroup;
 			children = (
+				A9BFCB311F543955008FCF4E /* .gitignore */,
 				A9BFCAF91F542788008FCF4E /* PixelShaderDemo */,
 				A9BFCB141F542788008FCF4E /* PixelShaderDemoTests */,
 				A9BFCB1F1F542788008FCF4E /* PixelShaderDemoUITests */,
@@ -103,6 +110,7 @@
 		A9BFCAF91F542788008FCF4E /* PixelShaderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A9BFCB2E1F543906008FCF4E /* shaders */,
 				A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */,
 				A9BFCAFC1F542788008FCF4E /* GameScene.sks */,
 				A9BFCAFE1F542788008FCF4E /* Actions.sks */,
@@ -132,6 +140,15 @@
 				A9BFCB221F542788008FCF4E /* Info.plist */,
 			);
 			path = PixelShaderDemoUITests;
+			sourceTree = "<group>";
+		};
+		A9BFCB2E1F543906008FCF4E /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				A9BFCB2F1F54391A008FCF4E /* shader_water_movement.fsh */,
+				A9BFCB301F54391A008FCF4E /* shader_water_reflection.fsh */,
+			);
+			path = shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +258,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9BFCB331F543CB0008FCF4E /* shader_water_movement.fsh in Resources */,
+				A9BFCB341F543CB0008FCF4E /* shader_water_reflection.fsh in Resources */,
 				A9BFCB061F542788008FCF4E /* Main.storyboard in Resources */,
 				A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */,
 				A9BFCB081F542788008FCF4E /* Assets.xcassets in Resources */,
 				A9BFCB0B1F542788008FCF4E /* LaunchScreen.storyboard in Resources */,
+				A9BFCB321F543955008FCF4E /* .gitignore in Resources */,
 				A9BFCAFF1F542788008FCF4E /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
