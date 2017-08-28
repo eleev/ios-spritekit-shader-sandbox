@@ -28,19 +28,21 @@ class GameScene: SKScene {
         createReflectionShader(shaderContainerReflection)
         
         createBeach()
+
+        /*
+        // Create shape node to use during mouse interaction
+        let w = (self.size.width + self.size.height) * 0.05
+        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
         
-//        // Create shape node to use during mouse interaction
-//        let w = (self.size.width + self.size.height) * 0.05
-//        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-//        
-//        if let spinnyNode = self.spinnyNode {
-//            spinnyNode.lineWidth = 2.5
-//            
-//            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-//            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-//                                              SKAction.fadeOut(withDuration: 0.5),
-//                                              SKAction.removeFromParent()]))
-//        }
+        if let spinnyNode = self.spinnyNode {
+            spinnyNode.lineWidth = 2.5
+            
+            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
+            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
+                                              SKAction.fadeOut(withDuration: 0.5),
+                                              SKAction.removeFromParent()]))
+        }
+         */
     }
     
     
@@ -111,7 +113,7 @@ class GameScene: SKScene {
         return shaderContainer
     }
     
-    private func createMovementShader(_ shaderContainer: SKSpriteNode) {
+    private func createMovementShader(_ shaderContainer: SKSpriteNode, for imageNamed: String = "sand.png") {
         let multiplier: CGFloat = 1.5
         let x: Float = Float(self.frame.size.width * multiplier)
         let y: Float = Float(self.frame.size.height * multiplier)
@@ -120,7 +122,7 @@ class GameScene: SKScene {
         let moveShader = SKShader(fileNamed: "shader_water_movement.fsh")
         moveShader.uniforms = [
             SKUniform(name: "size", vectorFloat3: movementVector),
-            SKUniform(name: "customTexture", texture: SKTexture(imageNamed: "sand.png"))
+            SKUniform(name: "customTexture", texture: SKTexture(imageNamed: imageNamed))
         ]
         shaderContainer.shader = moveShader
     }
@@ -132,7 +134,8 @@ class GameScene: SKScene {
         
         let reflectShader = SKShader(fileNamed: "shader_water_reflection.fsh")
         reflectShader.uniforms = [
-            SKUniform(name: "size", vectorFloat3: reflectionVector)
+            SKUniform(name: "size", vectorFloat3: reflectionVector),
+            SKUniform(name: "iterations", float: 3)
         ]
         shaderContainer.shader = reflectShader
     }
