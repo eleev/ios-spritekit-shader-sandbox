@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A9A280931F55819900F57F8D /* wave.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A280921F55819900F57F8D /* wave.fsh */; };
 		A9A280961F55931F00F57F8D /* SKShader+UniformUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A280951F55931F00F57F8D /* SKShader+UniformUpdates.swift */; };
+		A9A2809A1F55975500F57F8D /* lightning.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A280991F55975500F57F8D /* lightning.fsh */; };
 		A9BFCAFB1F542788008FCF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */; };
 		A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCAFC1F542788008FCF4E /* GameScene.sks */; };
 		A9BFCAFF1F542788008FCF4E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCAFE1F542788008FCF4E /* Actions.sks */; };
@@ -45,6 +46,7 @@
 		A9A1B83D1F5460EE003FDEE1 /* pixel_shader_demo_001.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pixel_shader_demo_001.gif; sourceTree = "<group>"; };
 		A9A280921F55819900F57F8D /* wave.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = wave.fsh; sourceTree = "<group>"; };
 		A9A280951F55931F00F57F8D /* SKShader+UniformUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKShader+UniformUpdates.swift"; sourceTree = "<group>"; };
+		A9A280991F55975500F57F8D /* lightning.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lightning.fsh; sourceTree = "<group>"; };
 		A9BFCAF71F542788008FCF4E /* PixelShaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelShaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9BFCAFC1F542788008FCF4E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */,
 				A9BFCB301F54391A008FCF4E /* water_reflection.fsh */,
 				A9A280921F55819900F57F8D /* wave.fsh */,
+				A9A280991F55975500F57F8D /* lightning.fsh */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A2809A1F55975500F57F8D /* lightning.fsh in Resources */,
 				A9BFCB331F543CB0008FCF4E /* water_movement.fsh in Resources */,
 				A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */,
 				A9BFCB061F542788008FCF4E /* Main.storyboard in Resources */,
