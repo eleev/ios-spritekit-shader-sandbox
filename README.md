@@ -6,10 +6,17 @@
 
 
 # PixelShaderDemo
-Demo project demonstrating how to use `GLSL` Shaders with `SpriteKit` in an iOS Application 👾
+Demo project demonstrating how to use `GLSL` Shaders with `SpriteKit` in an iOS Application 👾. More shaders will be added on a regular basis.
 
 
-<img src="https://user-images.githubusercontent.com/5098753/29778260-6ae1f4a0-8c17-11e7-8318-7cb1c17ccb96.gif" width="650">
+## Water Reflections
+<img src="https://user-images.githubusercontent.com/5098753/29831536-1b583f48-8cee-11e7-88ad-d0c57f33139d.gif" width="350">
+
+## RGB Lighning 
+<img src="https://user-images.githubusercontent.com/5098753/29831537-1b58fb86-8cee-11e7-96f6-1c024d4e0be0.gif" width="350">
+
+## Paint Node 
+<img src="https://user-images.githubusercontent.com/5098753/29831538-1b6069de-8cee-11e7-98a0-8613f7e693c8.gif" width="350">
 
 
 # Author
