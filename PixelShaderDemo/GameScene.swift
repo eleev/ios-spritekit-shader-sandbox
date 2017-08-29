@@ -17,17 +17,8 @@ class GameScene: SKScene {
     
     // MARK: - Lifecycle
     
-    override func didMove(to view: SKView) {
-        
-        let shaderContainerMovement = createShaderContainer()
-        createMovementShader(shaderContainerMovement, for: "sand")
+    override func didMove(to view: SKView) {        
 
-        shaderContainerReflection = createShaderContainer()
-        createReflectionShader(shaderContainerReflection!)
-        
-//        let shaderContainerWave = createShaderContainer()
-//        createWaveShader(shaderContainerWave)
-        
         createNode(for: "sand")
 
         /*
@@ -104,6 +95,24 @@ class GameScene: SKScene {
         return shaderContainerReflection?.shader?.updateUniform(named: "iterations", for: value)
     }
     
+    func waterReflection() {
+        let shaderContainerMovement = createShaderContainer()
+        createMovementShader(shaderContainerMovement, for: "sand")
+        
+        shaderContainerReflection = createShaderContainer()
+        createReflectionShader(shaderContainerReflection!)
+    }
+
+    func waterMovement() {
+        let shaderContainerWave = createShaderContainer()
+        createWaveShader(shaderContainerWave)
+    }
+    
+    func rgbLighningEnergy() {
+        let lighningContainer = createShaderContainer()
+        createLightningShader(lighningContainer)
+    }
+    
     // MARK: - Utility
     
     private func createShaderContainer(from imageNamed: String = "dummypixel.png") -> SKSpriteNode {
@@ -161,6 +170,18 @@ class GameScene: SKScene {
         shaderContainer.shader = waterShader
     }
     
+    
+    private func createLightningShader(_ shaderContainer: SKSpriteNode) {
+        let width = Float(self.frame.size.width)
+        let height = Float(self.frame.size.height)
+        let size = float3([width, height, 0])
+        
+        let lightningShader = SKShader(fileNamed: "lightning.fsh")
+        lightningShader.uniforms = [
+            SKUniform(name: "resolution", vectorFloat3: size)
+        ]
+        shaderContainer.shader = lightningShader
+    }
     
     private func createNode(for name: String) {
         let beach = SKSpriteNode(imageNamed: name)

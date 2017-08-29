@@ -10,6 +10,13 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+enum Scene {
+    case rgbLighning
+    case waterReflection
+    case water
+    case none
+}
+
 class GameViewController: UIViewController {
     
     // MARK: - Outlets
@@ -19,6 +26,11 @@ class GameViewController: UIViewController {
     // MARK: - Properties
     
     var scene: GameScene?
+    var currentScene: Scene = .none {
+        didSet {
+            // requires implementation
+        }
+    }
     
     // MARK: - Lifecycle
     
@@ -28,7 +40,7 @@ class GameViewController: UIViewController {
         // Load the SKScene from 'GameScene.sks'
         if let scene = SKScene(fileNamed: "GameScene") {
             // Set the scale mode to scale to fit the window
-            scene.scaleMode = .aspectFill
+            scene.scaleMode = .aspectFit
             
             // Present the scene
             skView.presentScene(scene)
@@ -68,4 +80,26 @@ class GameViewController: UIViewController {
         let value = sender.value
         scene?.updateReflectionIterations(for: value)
     }
+    
+    // MARK: - Butto actions
+    
+    @IBAction func rgbLighningAction(_ sender: UIButton) {
+        scene?.removeAllChildren()
+        scene?.rgbLighningEnergy()
+        currentScene = .rgbLighning
+    }
+    
+    @IBAction func waterReflectionAction(_ sender: UIButton) {
+        scene?.removeAllChildren()
+        scene?.waterReflection()
+        currentScene = .waterReflection
+    }
+    
+    @IBAction func waterAction(_ sender: UIButton) {
+        scene?.removeAllChildren()
+        scene?.waterMovement()
+        currentScene = .water
+    }
+    
+    
 }
