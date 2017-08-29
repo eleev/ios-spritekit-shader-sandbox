@@ -20,6 +20,13 @@ extension SKShader {
         return true
     }
     
+    @discardableResult func updateUniform(named name: String, for vector: float2) -> Bool {
+        guard let uniform = self.uniformNamed(name) else { return false }
+        uniform.vectorFloat2Value = vector
+        update(uniform: uniform, named: name)
+        return true
+    }
+    
     @discardableResult func updateUniform(named name: String, for vector: float3) -> Bool {
         guard let uniform = self.uniformNamed(name) else { return false }
         uniform.vectorFloat3Value = vector
