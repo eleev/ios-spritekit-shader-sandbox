@@ -11,10 +11,28 @@ import SpriteKit
 import GameplayKit
 
 enum Scene {
+    typealias ShaderUniformRange = (min: Float, max: Float)
+    
     case rgbLighning
     case waterReflection
     case water
+    case paintNoise
     case none
+    
+    func shaderRange() -> ShaderUniformRange {
+        switch self {
+        case .none:
+            return (min: 0, max: 0)
+        case .rgbLighning:
+            return (min: 0, max: 80)
+        case .water:
+            return (min: 0, max: 10)
+        case .waterReflection:
+            return (min: 0, max: 8)
+        case .paintNoise:
+            return (min: 0, 100)
+        }
+    }
 }
 
 class GameViewController: UIViewController {
@@ -77,8 +95,23 @@ class GameViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func iterationsSliderAction(_ sender: UISlider) {
+        let shaderRange = currentScene.shaderRange()
+        sender.setAllowedValueRange(min: shaderRange.min, max: shaderRange.max)
+        
         let value = sender.value
+        
+        switch currentScene {
+        case .rgbLighning:
+            scene?.updateRGBLightningEnergyTiming(for: value)
+        case .waterReflection:
         scene?.updateReflectionIterations(for: value)
+        case .water:
+            fallthrough
+        case .paintNoise:
+            fallthrough
+        case .none:
+            break
+        }
     }
     
     // MARK: - Butto actions
@@ -101,5 +134,11 @@ class GameViewController: UIViewController {
         currentScene = .water
     }
     
+    @IBAction func noisePaintAction(_ sender: UIButton) {
+        scene?.removeAllChildren()
+        scene?.paintNoise()
+        currentScene = .paintNoise
+    }
     
 }
+
