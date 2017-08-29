@@ -22,18 +22,20 @@
                             </skView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="0.0" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="MXU-Cc-NtE">
                                 <rect key="frame" x="14" y="613" width="347" height="31"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="iterationsSliderAction:" destination="BV1-FR-VrT" eventType="valueChanged" id="cOM-bJ-bWJ"/>
                                 </connections>
                             </slider>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eDt-pk-CXQ">
-                                <rect key="frame" x="234" y="36" width="125" height="114"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eDt-pk-CXQ">
+                                <rect key="frame" x="234" y="36" width="125" height="156"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-VJ-0jj">
-                                        <rect key="frame" x="18" y="0.0" width="107" height="30"/>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-VJ-0jj">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                        <state key="normal" title=" RGB Lighning  ">
+                                        <state key="normal" title=" RGB Lightning ">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -45,7 +47,7 @@
                                             <action selector="rgbLighningAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="S0e-Iv-nq1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OO-Vx-Cft">
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OO-Vx-Cft">
                                         <rect key="frame" x="0.0" y="42" width="125" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
@@ -61,11 +63,11 @@
                                             <action selector="waterReflectionAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="UjT-Ia-RJX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvo-fD-JVB">
-                                        <rect key="frame" x="75" y="84" width="50" height="30"/>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvo-fD-JVB">
+                                        <rect key="frame" x="0.0" y="84" width="125" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                        <state key="normal" title=" Water ">
+                                        <state key="normal" title=" Water Movement">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -75,6 +77,17 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="waterAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="mYQ-bk-8DG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCO-1O-3mM">
+                                        <rect key="frame" x="0.0" y="126" width="125" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Paint Noise">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="noisePaintAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ood-vV-HBD"/>
                                         </connections>
                                     </button>
                                 </subviews>
