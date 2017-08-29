@@ -17,5 +17,5 @@ Demo project demonstrating how to use `GLSL` Shaders with `SpriteKit` in an iOS 
 
 # Licence 
 
-`PixelShaderDemo` is available under the MIT license. See the [LICENSE](https://github.com/jVirus/PixelShaderDemo/blob/master/LICENSE) file for more info.
+`PixelShaderDemo` is available under the `MIT` license. See the [LICENSE](https://github.com/jVirus/PixelShaderDemo/blob/master/LICENSE) file for more info.
 
