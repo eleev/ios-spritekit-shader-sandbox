@@ -100,7 +100,7 @@ class GameScene: SKScene {
     
     // MARK: - Methods
     
-    @discardableResult func updateReflectionIterations(for value: Float) -> Bool? {
+    @discardableResult func updateReflectionIterations(for value: Float) -> Bool? {
         return shaderContainerReflection?.shader?.updateUniform(named: "iterations", for: value)
     }
     
