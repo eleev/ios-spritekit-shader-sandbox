@@ -10,6 +10,8 @@
 		A9A280931F55819900F57F8D /* wave.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A280921F55819900F57F8D /* wave.fsh */; };
 		A9A280961F55931F00F57F8D /* SKShader+UniformUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A280951F55931F00F57F8D /* SKShader+UniformUpdates.swift */; };
 		A9A2809A1F55975500F57F8D /* lightning.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A280991F55975500F57F8D /* lightning.fsh */; };
+		A9A2809C1F55AA5B00F57F8D /* UISlider+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2809B1F55AA5B00F57F8D /* UISlider+Range.swift */; };
+		A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */; };
 		A9BFCAFB1F542788008FCF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */; };
 		A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCAFC1F542788008FCF4E /* GameScene.sks */; };
 		A9BFCAFF1F542788008FCF4E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCAFE1F542788008FCF4E /* Actions.sks */; };
@@ -47,6 +49,8 @@
 		A9A280921F55819900F57F8D /* wave.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = wave.fsh; sourceTree = "<group>"; };
 		A9A280951F55931F00F57F8D /* SKShader+UniformUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKShader+UniformUpdates.swift"; sourceTree = "<group>"; };
 		A9A280991F55975500F57F8D /* lightning.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lightning.fsh; sourceTree = "<group>"; };
+		A9A2809B1F55AA5B00F57F8D /* UISlider+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISlider+Range.swift"; sourceTree = "<group>"; };
+		A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = paint_noise.fsh; sourceTree = "<group>"; };
 		A9BFCAF71F542788008FCF4E /* PixelShaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelShaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9BFCAFC1F542788008FCF4E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				A9A280951F55931F00F57F8D /* SKShader+UniformUpdates.swift */,
+				A9A2809B1F55AA5B00F57F8D /* UISlider+Range.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				A9BFCB301F54391A008FCF4E /* water_reflection.fsh */,
 				A9A280921F55819900F57F8D /* wave.fsh */,
 				A9A280991F55975500F57F8D /* lightning.fsh */,
+				A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 				A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */,
 				A9BFCB061F542788008FCF4E /* Main.storyboard in Resources */,
 				A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */,
+				A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */,
 				A9BFCB081F542788008FCF4E /* Assets.xcassets in Resources */,
 				A9BFCB0B1F542788008FCF4E /* LaunchScreen.storyboard in Resources */,
 				A9BFCB321F543955008FCF4E /* .gitignore in Resources */,
@@ -319,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A2809C1F55AA5B00F57F8D /* UISlider+Range.swift in Sources */,
 				A9BFCB011F542788008FCF4E /* GameScene.swift in Sources */,
 				A9BFCB031F542788008FCF4E /* GameViewController.swift in Sources */,
 				A9A280961F55931F00F57F8D /* SKShader+UniformUpdates.swift in Sources */,
