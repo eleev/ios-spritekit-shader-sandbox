@@ -13,7 +13,8 @@ class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
-    var shaderContainerReflection: SKSpriteNode?
+    private var shaderContainer: SKSpriteNode?
+    private var touch: UITouch?
     
     // MARK: - Lifecycle
     
@@ -44,35 +45,35 @@ class GameScene: SKScene {
     
     // MARK: - Touch handling
     
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
+    private func updateFingerPosition(_ position: CGPoint) {
+        func clamp(value: CGFloat) -> CGFloat {
+            let min: CGFloat = -1.0
+            let max: CGFloat = 10.0
+            return (value - min) / (max - min)
         }
+        
+        let positionX = clamp(value: position.x / 100)
+        let positionY = clamp(value: position.y / 500)
+        
+        let point = float2([Float(positionX), Float(positionY)])
+        shaderContainer?.shader?.updateUniform(named: "finger", for: point)
+        
+        debugPrint("finger position: ", positionX, positionY)
+    }
+    
+    func touchDown(atPoint pos : CGPoint) {
+        updateFingerPosition(pos)
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
+        updateFingerPosition(pos)
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
+        updateFingerPosition(pos)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-        }
-        
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     
@@ -92,25 +93,34 @@ class GameScene: SKScene {
     // MARK: - Methods
     
     @discardableResult func updateReflectionIterations(for value: Float) -> Bool? {
-        return shaderContainerReflection?.shader?.updateUniform(named: "iterations", for: value)
+        return shaderContainer?.shader?.updateUniform(named: "iterations", for: value)
+    }
+    
+    @discardableResult func updateRGBLightningEnergyTiming(for value: Float) -> Bool? {
+        return shaderContainer?.shader?.updateUniform(named: "speed", for: value)
     }
     
     func waterReflection() {
         let shaderContainerMovement = createShaderContainer()
         createMovementShader(shaderContainerMovement, for: "sand")
         
-        shaderContainerReflection = createShaderContainer()
-        createReflectionShader(shaderContainerReflection!)
+        shaderContainer = createShaderContainer()
+        createReflectionShader(shaderContainer!)
     }
 
     func waterMovement() {
-        let shaderContainerWave = createShaderContainer()
-        createWaveShader(shaderContainerWave)
+        shaderContainer = createShaderContainer()
+        createWaveShader(shaderContainer!)
     }
     
     func rgbLighningEnergy() {
-        let lighningContainer = createShaderContainer()
-        createLightningShader(lighningContainer)
+        shaderContainer = createShaderContainer()
+        createLightningShader(shaderContainer!)
+    }
+    
+    func paintNoise() {
+        shaderContainer = createShaderContainer()
+        createPaintNoiseShader(shaderContainer!)
     }
     
     // MARK: - Utility
@@ -131,56 +141,68 @@ class GameScene: SKScene {
     
     private func createMovementShader(_ shaderContainer: SKSpriteNode, for imageNamed: String = "sand.png") {
         let multiplier: CGFloat = 1.5
-        let x: Float = Float(self.frame.size.width * multiplier)
-        let y: Float = Float(self.frame.size.height * multiplier)
-        let movementVector: float3 = float3([x, y, 0])
+        let size = getSceneResolution(multiplier: multiplier)
         
         let moveShader = SKShader(fileNamed: "water_movement.fsh")
         moveShader.uniforms = [
-            SKUniform(name: "size", vectorFloat3: movementVector),
+            SKUniform(name: "size", vectorFloat3: size),
             SKUniform(name: "customTexture", texture: SKTexture(imageNamed: imageNamed))
         ]
         shaderContainer.shader = moveShader
     }
     
     private func createReflectionShader(_ shaderContainer: SKSpriteNode) {
-        let x: Float = Float(self.frame.size.width)
-        let y: Float = Float(self.frame.size.height)
-        let reflectionVector: float3 = float3([x, y, 0])
+        let size = getSceneResolution()
         let iterations: Float = 4
         
         let reflectShader = SKShader(fileNamed: "water_reflection.fsh")
         reflectShader.uniforms = [
-            SKUniform(name: "size", vectorFloat3: reflectionVector),
+            SKUniform(name: "size", vectorFloat3: size),
             SKUniform(name: "iterations", float: iterations)
         ]
         shaderContainer.shader = reflectShader
     }
     
     private func createWaveShader(_ shaderContainer: SKSpriteNode, for imageNamed: String = "sand.png") {
-        let width = Float(self.frame.size.width)
-        let height = Float(self.frame.size.height)
-        let vector = float3([width, height, 0])
+        let size = getSceneResolution()
         
         let waterShader = SKShader(fileNamed: "wave.fsh")
         waterShader.uniforms = [
-            SKUniform(name: "size", vectorFloat3: vector),
+            SKUniform(name: "size", vectorFloat3: size),
             SKUniform(name: "customTexture", texture: SKTexture(imageNamed: imageNamed))
         ]
         shaderContainer.shader = waterShader
     }
     
-    
     private func createLightningShader(_ shaderContainer: SKSpriteNode) {
-        let width = Float(self.frame.size.width)
-        let height = Float(self.frame.size.height)
-        let size = float3([width, height, 0])
+        let size = getSceneResolution()
+        let speed: Float = 20.0
         
         let lightningShader = SKShader(fileNamed: "lightning.fsh")
         lightningShader.uniforms = [
-            SKUniform(name: "resolution", vectorFloat3: size)
+            SKUniform(name: "resolution", vectorFloat3: size),
+            SKUniform(name: "speed", float: speed)
         ]
         shaderContainer.shader = lightningShader
+    }
+    
+    private func createPaintNoiseShader(_ shaderContainer: SKSpriteNode) {
+        let size = getSceneResolution()
+        let finger = float2([0.23, 0.1])
+        
+        let paintNoiseShader = SKShader(fileNamed: "paint_noise.fsh")
+        paintNoiseShader.uniforms = [
+            SKUniform(name: "resolution", vectorFloat3: size),
+            SKUniform(name: "finger", vectorFloat2: finger)
+        ]
+        shaderContainer.shader = paintNoiseShader
+    }
+    
+    private func getSceneResolution(multiplier: CGFloat = 1.0) -> float3 {
+        let width = Float(self.frame.size.width * multiplier)
+        let height = Float(self.frame.size.height * multiplier)
+        let size = float3([width, height, 0])
+        return size
     }
     
     private func createNode(for name: String) {
