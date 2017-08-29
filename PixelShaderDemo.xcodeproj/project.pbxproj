@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9A280931F55819900F57F8D /* wave.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A280921F55819900F57F8D /* wave.fsh */; };
+		A9A280961F55931F00F57F8D /* SKShader+UniformUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A280951F55931F00F57F8D /* SKShader+UniformUpdates.swift */; };
 		A9BFCAFB1F542788008FCF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */; };
 		A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCAFC1F542788008FCF4E /* GameScene.sks */; };
 		A9BFCAFF1F542788008FCF4E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCAFE1F542788008FCF4E /* Actions.sks */; };
@@ -18,8 +20,8 @@
 		A9BFCB161F542788008FCF4E /* PixelShaderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCB151F542788008FCF4E /* PixelShaderDemoTests.swift */; };
 		A9BFCB211F542788008FCF4E /* PixelShaderDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCB201F542788008FCF4E /* PixelShaderDemoUITests.swift */; };
 		A9BFCB321F543955008FCF4E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB311F543955008FCF4E /* .gitignore */; };
-		A9BFCB331F543CB0008FCF4E /* shader_water_movement.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB2F1F54391A008FCF4E /* shader_water_movement.fsh */; };
-		A9BFCB341F543CB0008FCF4E /* shader_water_reflection.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB301F54391A008FCF4E /* shader_water_reflection.fsh */; };
+		A9BFCB331F543CB0008FCF4E /* water_movement.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */; };
+		A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB301F54391A008FCF4E /* water_reflection.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		A9A1B83D1F5460EE003FDEE1 /* pixel_shader_demo_001.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pixel_shader_demo_001.gif; sourceTree = "<group>"; };
+		A9A280921F55819900F57F8D /* wave.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = wave.fsh; sourceTree = "<group>"; };
+		A9A280951F55931F00F57F8D /* SKShader+UniformUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKShader+UniformUpdates.swift"; sourceTree = "<group>"; };
 		A9BFCAF71F542788008FCF4E /* PixelShaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelShaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9BFCAFC1F542788008FCF4E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -57,8 +61,8 @@
 		A9BFCB1C1F542788008FCF4E /* PixelShaderDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelShaderDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCB201F542788008FCF4E /* PixelShaderDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelShaderDemoUITests.swift; sourceTree = "<group>"; };
 		A9BFCB221F542788008FCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9BFCB2F1F54391A008FCF4E /* shader_water_movement.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader_water_movement.fsh; sourceTree = "<group>"; };
-		A9BFCB301F54391A008FCF4E /* shader_water_reflection.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader_water_reflection.fsh; sourceTree = "<group>"; };
+		A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_movement.fsh; sourceTree = "<group>"; };
+		A9BFCB301F54391A008FCF4E /* water_reflection.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_reflection.fsh; sourceTree = "<group>"; };
 		A9BFCB311F543955008FCF4E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,14 @@
 			path = README_RESOURCES;
 			sourceTree = "<group>";
 		};
+		A9A280941F5592D700F57F8D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9A280951F55931F00F57F8D /* SKShader+UniformUpdates.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A9BFCAEE1F542788008FCF4E = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +132,8 @@
 		A9BFCAF91F542788008FCF4E /* PixelShaderDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A9BFCB2E1F543906008FCF4E /* shaders */,
+				A9A280941F5592D700F57F8D /* Extensions */,
+				A9BFCB2E1F543906008FCF4E /* Shaders */,
 				A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */,
 				A9BFCAFC1F542788008FCF4E /* GameScene.sks */,
 				A9BFCAFE1F542788008FCF4E /* Actions.sks */,
@@ -152,13 +165,14 @@
 			path = PixelShaderDemoUITests;
 			sourceTree = "<group>";
 		};
-		A9BFCB2E1F543906008FCF4E /* shaders */ = {
+		A9BFCB2E1F543906008FCF4E /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				A9BFCB2F1F54391A008FCF4E /* shader_water_movement.fsh */,
-				A9BFCB301F54391A008FCF4E /* shader_water_reflection.fsh */,
+				A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */,
+				A9BFCB301F54391A008FCF4E /* water_reflection.fsh */,
+				A9A280921F55819900F57F8D /* wave.fsh */,
 			);
-			path = shaders;
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,13 +282,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9BFCB331F543CB0008FCF4E /* shader_water_movement.fsh in Resources */,
-				A9BFCB341F543CB0008FCF4E /* shader_water_reflection.fsh in Resources */,
+				A9BFCB331F543CB0008FCF4E /* water_movement.fsh in Resources */,
+				A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */,
 				A9BFCB061F542788008FCF4E /* Main.storyboard in Resources */,
 				A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */,
 				A9BFCB081F542788008FCF4E /* Assets.xcassets in Resources */,
 				A9BFCB0B1F542788008FCF4E /* LaunchScreen.storyboard in Resources */,
 				A9BFCB321F543955008FCF4E /* .gitignore in Resources */,
+				A9A280931F55819900F57F8D /* wave.fsh in Resources */,
 				A9BFCAFF1F542788008FCF4E /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +317,7 @@
 			files = (
 				A9BFCB011F542788008FCF4E /* GameScene.swift in Sources */,
 				A9BFCB031F542788008FCF4E /* GameViewController.swift in Sources */,
+				A9A280961F55931F00F57F8D /* SKShader+UniformUpdates.swift in Sources */,
 				A9BFCAFB1F542788008FCF4E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
