@@ -26,12 +26,67 @@
                                     <action selector="iterationsSliderAction:" destination="BV1-FR-VrT" eventType="valueChanged" id="cOM-bJ-bWJ"/>
                                 </connections>
                             </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eDt-pk-CXQ">
+                                <rect key="frame" x="234" y="36" width="125" height="114"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-VJ-0jj">
+                                        <rect key="frame" x="18" y="0.0" width="107" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title=" RGB Lighning  ">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="rgbLighningAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="S0e-Iv-nq1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OO-Vx-Cft">
+                                        <rect key="frame" x="0.0" y="42" width="125" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title=" Water Reflection ">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="waterReflectionAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="UjT-Ia-RJX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvo-fD-JVB">
+                                        <rect key="frame" x="75" y="84" width="50" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title=" Water ">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="waterAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="mYQ-bk-8DG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="eDt-pk-CXQ" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="16" id="0kA-ko-gFN"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="I90-0a-4L9" secondAttribute="bottom" id="32M-ic-M3s"/>
                             <constraint firstItem="I90-0a-4L9" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="5OL-D1-Kef"/>
                             <constraint firstItem="I90-0a-4L9" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="6Ss-sB-0JN"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="eDt-pk-CXQ" secondAttribute="trailing" constant="16" id="E6U-8Z-xFT"/>
                             <constraint firstItem="I90-0a-4L9" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="H8y-0e-N0R"/>
                             <constraint firstItem="MXU-Cc-NtE" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="16" id="LgQ-Vw-IpD"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="MXU-Cc-NtE" secondAttribute="trailing" constant="16" id="MHb-cd-50b"/>
