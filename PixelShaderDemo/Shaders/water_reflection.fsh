@@ -1,6 +1,6 @@
 void main(void) {
     
-    float time = u_time * .5;
+    float time = u_time * .25;
     vec2 sp = gl_FragCoord.xy / size.xy;
     vec2 p = sp * 6.0 - 20.0;
     vec2 i = p;
@@ -12,7 +12,7 @@ void main(void) {
         i = p + vec2(cos(t - i.x) + sin(t + i.y), sin(t - i.y) + cos(t + i.x));
         c += 1.0 / length(vec2(p.x / (sin(i.x + t) / inten), p.y / (cos(i.y + t) / inten)));
     }
-    
+
     c /= float(5);
     c = 1.5-sqrt(c);
     vec3 colour = vec3(pow(abs(c), 15.0));
