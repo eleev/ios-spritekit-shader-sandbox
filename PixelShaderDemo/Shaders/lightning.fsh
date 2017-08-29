@@ -39,9 +39,9 @@ void main(void) {
         float pct = val / lim;
         
         // Lighning paths drawing
-        float t = abs(pct * pct / ((uv.x - sin(u_time * 2. - uv.y) / 2.  + fbm( uv + (-u_time * 20.) / val)) * (lim * 15.0)));
-        float u = abs(pct * pct / ((uv.x - sin(-u_time * 2. - uv.y) / 2.  + fbm( uv + (u_time * 20.) / val)) * (lim * 15.0)));
-        float v = abs(pct * pct / ((uv.x - cos(u_time * 2. - uv.x) / 2.  + fbm( uv + (u_time * 20.) / val)) * (lim * 15.0)));
+        float t = abs(pct * pct / ((uv.x - sin(u_time * 2. - uv.y) / 2.  + fbm( uv + (-u_time * speed) / val)) * (lim * 15.0)));
+        float u = abs(pct * pct / ((uv.x - sin(-u_time * 2. - uv.y) / 2.  + fbm( uv + (u_time * speed) / val)) * (lim * 15.0)));
+        float v = abs(pct * pct / ((uv.x - cos(u_time * 2. - uv.x) / 2.  + fbm( uv + (u_time * speed) / val)) * (lim * 15.0)));
 
         // Coloring the lighning paths
         finalColor +=  t * vec3(pct + .75, 1., 1.0);
