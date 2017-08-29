@@ -13,21 +13,22 @@ class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
-    
+    var shaderContainerReflection: SKSpriteNode?
     
     // MARK: - Lifecycle
     
     override func didMove(to view: SKView) {
         
         let shaderContainerMovement = createShaderContainer()
-        // Create a movement shader from a shader file
-        createMovementShader(shaderContainerMovement)
+        createMovementShader(shaderContainerMovement, for: "sand")
+
+        shaderContainerReflection = createShaderContainer()
+        createReflectionShader(shaderContainerReflection!)
         
-        // Createa a relfection shader from a shader file
-        let shaderContainerReflection = createShaderContainer()
-        createReflectionShader(shaderContainerReflection)
+//        let shaderContainerWave = createShaderContainer()
+//        createWaveShader(shaderContainerWave)
         
-        createBeach()
+        createNode(for: "sand")
 
         /*
         // Create shape node to use during mouse interaction
@@ -97,6 +98,12 @@ class GameScene: SKScene {
     }
  
     
+    // MARK: - Methods
+    
+    @discardableResult func updateReflectionIterations(for value: Float) -> Bool? {
+        return shaderContainerReflection?.shader?.updateUniform(named: "iterations", for: value)
+    }
+    
     // MARK: - Utility
     
     private func createShaderContainer(from imageNamed: String = "dummypixel.png") -> SKSpriteNode {
@@ -119,7 +126,7 @@ class GameScene: SKScene {
         let y: Float = Float(self.frame.size.height * multiplier)
         let movementVector: float3 = float3([x, y, 0])
         
-        let moveShader = SKShader(fileNamed: "shader_water_movement.fsh")
+        let moveShader = SKShader(fileNamed: "water_movement.fsh")
         moveShader.uniforms = [
             SKUniform(name: "size", vectorFloat3: movementVector),
             SKUniform(name: "customTexture", texture: SKTexture(imageNamed: imageNamed))
@@ -131,20 +138,36 @@ class GameScene: SKScene {
         let x: Float = Float(self.frame.size.width)
         let y: Float = Float(self.frame.size.height)
         let reflectionVector: float3 = float3([x, y, 0])
+        let iterations: Float = 4
         
-        let reflectShader = SKShader(fileNamed: "shader_water_reflection.fsh")
+        let reflectShader = SKShader(fileNamed: "water_reflection.fsh")
         reflectShader.uniforms = [
             SKUniform(name: "size", vectorFloat3: reflectionVector),
-            SKUniform(name: "iterations", float: 4)
+            SKUniform(name: "iterations", float: iterations)
         ]
         shaderContainer.shader = reflectShader
     }
     
-    private func createBeach() {
-        let beach = SKSpriteNode(imageNamed: "beach.png")
+    private func createWaveShader(_ shaderContainer: SKSpriteNode, for imageNamed: String = "sand.png") {
+        let width = Float(self.frame.size.width)
+        let height = Float(self.frame.size.height)
+        let vector = float3([width, height, 0])
+        
+        let waterShader = SKShader(fileNamed: "wave.fsh")
+        waterShader.uniforms = [
+            SKUniform(name: "size", vectorFloat3: vector),
+            SKUniform(name: "customTexture", texture: SKTexture(imageNamed: imageNamed))
+        ]
+        shaderContainer.shader = waterShader
+    }
+    
+    
+    private func createNode(for name: String) {
+        let beach = SKSpriteNode(imageNamed: name)
         beach.size = self.size
         beach.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
         self.addChild(beach)
     }
     
 }
+
