@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +12,39 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="PixelShaderDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" ignoresSiblingOrder="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I90-0a-4L9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </skView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="0.0" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="MXU-Cc-NtE">
+                                <rect key="frame" x="14" y="613" width="347" height="31"/>
+                                <connections>
+                                    <action selector="iterationsSliderAction:" destination="BV1-FR-VrT" eventType="valueChanged" id="cOM-bJ-bWJ"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="I90-0a-4L9" secondAttribute="bottom" id="32M-ic-M3s"/>
+                            <constraint firstItem="I90-0a-4L9" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="5OL-D1-Kef"/>
+                            <constraint firstItem="I90-0a-4L9" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="6Ss-sB-0JN"/>
+                            <constraint firstItem="I90-0a-4L9" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="H8y-0e-N0R"/>
+                            <constraint firstItem="MXU-Cc-NtE" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="16" id="LgQ-Vw-IpD"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="MXU-Cc-NtE" secondAttribute="trailing" constant="16" id="MHb-cd-50b"/>
+                            <constraint firstItem="I90-0a-4L9" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" id="Q7l-n2-dx7"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="I90-0a-4L9" secondAttribute="trailing" id="exW-cJ-gGw"/>
+                            <constraint firstItem="I90-0a-4L9" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="hzQ-Nm-FjO"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="MXU-Cc-NtE" secondAttribute="bottom" constant="24" id="nNF-YZ-2nO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <connections>
+                        <outlet property="skView" destination="I90-0a-4L9" id="Ikt-Dr-d5K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
