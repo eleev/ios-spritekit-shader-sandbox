@@ -17,6 +17,7 @@ enum Scene {
     case waterReflection
     case water
     case paintNoise
+    case flame
     case none
     
     func shaderRange() -> ShaderUniformRange {
@@ -30,6 +31,8 @@ enum Scene {
         case .waterReflection:
             return (min: 0, max: 8)
         case .paintNoise:
+            return (min: 0, 100)
+        case .flame:
             return (min: 0, 100)
         }
     }
@@ -103,8 +106,8 @@ class GameViewController: UIViewController {
         switch currentScene {
         case .rgbLighning:
             scene?.updateRGBLightningEnergyTiming(for: value)
-        case .waterReflection:
-        scene?.updateReflectionIterations(for: value)
+        case .waterReflection, .flame:
+            scene?.updateReflectionIterations(for: value)
         case .water:
             fallthrough
         case .paintNoise:
@@ -140,5 +143,10 @@ class GameViewController: UIViewController {
         currentScene = .paintNoise
     }
     
+    @IBAction func flameAction(_ sender: UIButton) {
+        scene?.removeAllChildren()
+        scene?.flameShader()
+        currentScene = .flame
+    }
 }
 
