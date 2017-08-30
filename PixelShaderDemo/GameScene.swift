@@ -123,6 +123,11 @@ class GameScene: SKScene {
         createPaintNoiseShader(shaderContainer!)
     }
     
+    func flameShader() {
+        shaderContainer = createShaderContainer()
+        createFlameDistanceShader(shaderContainer!)
+    }
+    
     // MARK: - Utility
     
     private func createShaderContainer(from imageNamed: String = "dummypixel.png") -> SKSpriteNode {
@@ -196,6 +201,18 @@ class GameScene: SKScene {
             SKUniform(name: "finger", vectorFloat2: finger)
         ]
         shaderContainer.shader = paintNoiseShader
+    }
+    
+    private func createFlameDistanceShader(_ shaderContainer: SKSpriteNode) {
+        let size = getSceneResolution()
+        let iterations: Float = 64.0
+        
+        let flameShader = SKShader(fileNamed: "flame_distance_field.fsh")
+        flameShader.uniforms = [
+            SKUniform(name: "resolution", vectorFloat3: size),
+            SKUniform(name: "iterations", float: iterations)
+        ]
+        shaderContainer.shader = flameShader
     }
     
     private func getSceneResolution(multiplier: CGFloat = 1.0) -> float3 {
