@@ -30,7 +30,7 @@
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eDt-pk-CXQ">
-                                <rect key="frame" x="234" y="36" width="125" height="156"/>
+                                <rect key="frame" x="234" y="36" width="125" height="198"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-VJ-0jj">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
@@ -94,6 +94,22 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="noisePaintAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ood-vV-HBD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w68-8g-9pj">
+                                        <rect key="frame" x="0.0" y="168" width="125" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Flame">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="flameAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="bi1-Uz-6MS"/>
                                         </connections>
                                     </button>
                                 </subviews>
