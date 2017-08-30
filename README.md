@@ -18,6 +18,9 @@ Demo project demonstrating how to use `GLSL` Shaders with `SpriteKit` in an iOS 
 ## Paint Noise 
 <img src="https://user-images.githubusercontent.com/5098753/29831538-1b6069de-8cee-11e7-98a0-8613f7e693c8.gif" width="350">
 
+## Flame Raymatching
+<img src="https://user-images.githubusercontent.com/5098753/29877584-b6cb2c0a-8da8-11e7-950b-329fc49cd856.gif" width="350">
+
 
 # Author
 `Astemir Eleev` - iOS Software Engineer
