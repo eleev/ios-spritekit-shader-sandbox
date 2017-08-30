@@ -25,6 +25,7 @@
 		A9BFCB321F543955008FCF4E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB311F543955008FCF4E /* .gitignore */; };
 		A9BFCB331F543CB0008FCF4E /* water_movement.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */; };
 		A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB301F54391A008FCF4E /* water_reflection.fsh */; };
+		A9E938B21F56E87A002229EF /* flame_distance_field.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9E938B11F56E87A002229EF /* flame_distance_field.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_movement.fsh; sourceTree = "<group>"; };
 		A9BFCB301F54391A008FCF4E /* water_reflection.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_reflection.fsh; sourceTree = "<group>"; };
 		A9BFCB311F543955008FCF4E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A9E938B11F56E87A002229EF /* flame_distance_field.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = flame_distance_field.fsh; path = PixelShaderDemo/shaders/flame_distance_field.fsh; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				A9A280921F55819900F57F8D /* wave.fsh */,
 				A9A280991F55975500F57F8D /* lightning.fsh */,
 				A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */,
+				A9E938B11F56E87A002229EF /* flame_distance_field.fsh */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */,
 				A9BFCB061F542788008FCF4E /* Main.storyboard in Resources */,
 				A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */,
+				A9E938B21F56E87A002229EF /* flame_distance_field.fsh in Resources */,
 				A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */,
 				A9BFCB081F542788008FCF4E /* Assets.xcassets in Resources */,
 				A9BFCB0B1F542788008FCF4E /* LaunchScreen.storyboard in Resources */,
