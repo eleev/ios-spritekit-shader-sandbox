@@ -15,7 +15,7 @@ Demo project demonstrating how to use `GLSL` Shaders with `SpriteKit` in an iOS 
 ## RGB Lighning 
 <img src="https://user-images.githubusercontent.com/5098753/29831537-1b58fb86-8cee-11e7-96f6-1c024d4e0be0.gif" width="350">
 
-## Paint Node 
+## Paint Noise 
 <img src="https://user-images.githubusercontent.com/5098753/29831538-1b6069de-8cee-11e7-98a0-8613f7e693c8.gif" width="350">
 
 
