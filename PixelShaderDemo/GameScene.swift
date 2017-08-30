@@ -207,7 +207,7 @@ class GameScene: SKScene {
         let size = getSceneResolution()
         let iterations: Float = 64.0
         
-        let flameShader = SKShader(fileNamed: "flame_distance_field.fsh")
+        let flameShader = SKShader(fileNamed: "flame_raymarching.fsh")
         flameShader.uniforms = [
             SKUniform(name: "resolution", vectorFloat3: size),
             SKUniform(name: "iterations", float: iterations)
