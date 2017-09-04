@@ -72,7 +72,7 @@ void main(void) {
     
     vec4 col = mix(vec4(1., .5, .1, 1.), vec4(0.1, .5, 1., 1.), p.y * .02 + .4);
     
-    gl_FragColor = mix(vec4(0.), col, pow(glow * 2.,4.));
+    gl_FragColor = mix(vec4(0.), col, pow(glow * 2., 4.));
 }
 
 

@@ -1,6 +1,6 @@
 // Original Author: Keijiro Takahashi
 // Original Source: https://github.com/keijiro/ShaderSketches/blob/master/Fragment/TriLattice6.glsl
-// Abopted for SpriteKit+iOS 10.0 by: Astemir Eleev (https://github.com/jVirus)
+// Modified and Abopted for SpriteKit+iOS 10.0 by: Astemir Eleev (https://github.com/jVirus)
 
 float rand(vec2 uv) {
     return fract(sin(dot(uv, vec2(112.9898, 78.233))) * 43758.5453);
