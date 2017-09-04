@@ -13,6 +13,7 @@
 		A9A2809A1F55975500F57F8D /* lightning.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A280991F55975500F57F8D /* lightning.fsh */; };
 		A9A2809C1F55AA5B00F57F8D /* UISlider+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2809B1F55AA5B00F57F8D /* UISlider+Range.swift */; };
 		A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */; };
+		A9BA44651F5D61C50008BAE1 /* splash.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BA44641F5D61C50008BAE1 /* splash.fsh */; };
 		A9BFCAFB1F542788008FCF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */; };
 		A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCAFC1F542788008FCF4E /* GameScene.sks */; };
 		A9BFCAFF1F542788008FCF4E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCAFE1F542788008FCF4E /* Actions.sks */; };
@@ -54,6 +55,7 @@
 		A9A280991F55975500F57F8D /* lightning.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lightning.fsh; sourceTree = "<group>"; };
 		A9A2809B1F55AA5B00F57F8D /* UISlider+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISlider+Range.swift"; sourceTree = "<group>"; };
 		A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = paint_noise.fsh; sourceTree = "<group>"; };
+		A9BA44641F5D61C50008BAE1 /* splash.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = splash.fsh; sourceTree = "<group>"; };
 		A9BFCAF71F542788008FCF4E /* PixelShaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelShaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9BFCAFC1F542788008FCF4E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */,
 				A9E938B31F56FF44002229EF /* flame_raymarching.fsh */,
 				A93BA65C1F5D2C1500F22CAF /* tri_lattice6.fsh */,
+				A9BA44641F5D61C50008BAE1 /* splash.fsh */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */,
 				A9E938B41F56FF44002229EF /* flame_raymarching.fsh in Resources */,
 				A9BFCB081F542788008FCF4E /* Assets.xcassets in Resources */,
+				A9BA44651F5D61C50008BAE1 /* splash.fsh in Resources */,
 				A93BA65D1F5D2C1500F22CAF /* tri_lattice6.fsh in Resources */,
 				A9BFCB0B1F542788008FCF4E /* LaunchScreen.storyboard in Resources */,
 				A9BFCB321F543955008FCF4E /* .gitignore in Resources */,
