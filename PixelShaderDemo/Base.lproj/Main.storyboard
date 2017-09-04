@@ -30,7 +30,7 @@
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eDt-pk-CXQ">
-                                <rect key="frame" x="234" y="36" width="125" height="198"/>
+                                <rect key="frame" x="234" y="36" width="125" height="240"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-VJ-0jj">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
@@ -98,7 +98,7 @@
                                     </button>
                                     <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w68-8g-9pj">
                                         <rect key="frame" x="0.0" y="168" width="125" height="30"/>
-                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.93635237216949463" green="0.5224452018737793" blue="0.49023857712745667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Flame">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -110,6 +110,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="flameAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="bi1-Uz-6MS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAO-lN-QfK">
+                                        <rect key="frame" x="0.0" y="210" width="125" height="30"/>
+                                        <color key="backgroundColor" red="0.9363523722" green="0.52244520189999999" blue="0.49023857710000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Lattice6">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="lattice6Action:" destination="BV1-FR-VrT" eventType="touchUpInside" id="a7q-ec-P53"/>
                                         </connections>
                                     </button>
                                 </subviews>
