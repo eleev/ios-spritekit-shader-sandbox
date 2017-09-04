@@ -30,7 +30,7 @@
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eDt-pk-CXQ">
-                                <rect key="frame" x="234" y="36" width="125" height="240"/>
+                                <rect key="frame" x="234" y="36" width="125" height="282"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-VJ-0jj">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
@@ -120,6 +120,16 @@
                                         </state>
                                         <connections>
                                             <action selector="lattice6Action:" destination="BV1-FR-VrT" eventType="touchUpInside" id="a7q-ec-P53"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MR-Ds-CvV">
+                                        <rect key="frame" x="0.0" y="252" width="125" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Splash">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="splashAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Uoz-mO-4BJ"/>
                                         </connections>
                                     </button>
                                 </subviews>

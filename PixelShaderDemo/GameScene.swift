@@ -133,6 +133,11 @@ class GameScene: SKScene {
         createTriLattice6Shader(shaderContainer!)
     }
     
+    func splashShader() {
+        shaderContainer = createShaderContainer()
+        createSplashShader(shaderContainer!)
+    }
+    
     // MARK: - Utility
     
     private func createShaderContainer(from imageNamed: String = "dummypixel.png") -> SKSpriteNode {
@@ -228,6 +233,17 @@ class GameScene: SKScene {
             SKUniform(name: "resolution", vectorFloat3: size)
         ]
         shaderContainer.shader = latticeShasder
+    }
+    
+    private func createSplashShader(_ shaderContainer: SKSpriteNode, for imageNamed: String = "sand.png") {
+        let size = getSceneResolution()
+        
+        let splashShader = SKShader(fileNamed: "splash.fsh")
+        splashShader.uniforms = [
+            SKUniform(name: "resolution", vectorFloat3: size),
+            SKUniform(name: "image", texture: SKTexture(imageNamed: imageNamed))
+        ]
+        shaderContainer.shader = splashShader
     }
     
     private func getSceneResolution(multiplier: CGFloat = 1.0) -> float3 {
