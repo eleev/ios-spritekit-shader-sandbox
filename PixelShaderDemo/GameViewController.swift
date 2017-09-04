@@ -18,6 +18,7 @@ enum Scene {
     case water
     case paintNoise
     case flame
+    case lattice6
     case none
     
     func shaderRange() -> ShaderUniformRange {
@@ -31,9 +32,11 @@ enum Scene {
         case .waterReflection:
             return (min: 0, max: 8)
         case .paintNoise:
-            return (min: 0, 100)
+            return (min: 0, max: 100)
+        case .lattice6:
+            return (min: 0, max: 100)
         case .flame:
-            return (min: 0, 100)
+            return (min: 0, max: 100)
         }
     }
 }
@@ -112,6 +115,8 @@ class GameViewController: UIViewController {
             fallthrough
         case .paintNoise:
             fallthrough
+        case .lattice6:
+            fallthrough
         case .none:
             break
         }
@@ -148,5 +153,13 @@ class GameViewController: UIViewController {
         scene?.flameShader()
         currentScene = .flame
     }
+    
+    @IBAction func lattice6Action(_ sender: UIButton) {
+        scene?.removeAllChildren()
+        scene?.lattice6Shader()
+        currentScene = .lattice6
+    }
+    
+    
 }
 
