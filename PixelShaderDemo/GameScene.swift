@@ -100,6 +100,10 @@ class GameScene: SKScene {
         return shaderContainer?.shader?.updateUniform(named: "speed", for: value)
     }
     
+    @discardableResult func updateSplashIterations(for value: Float) -> Bool? {
+        return shaderContainer?.shader?.updateUniform(named: "u_iterations", for: value)
+    }
+    
     func waterReflection() {
         let shaderContainerMovement = createShaderContainer()
         createMovementShader(shaderContainerMovement, for: "sand")
@@ -237,11 +241,16 @@ class GameScene: SKScene {
     
     private func createSplashShader(_ shaderContainer: SKSpriteNode, for imageNamed: String = "sand.png") {
         let size = getSceneResolution()
+        let u_date = float4([0, 0, 0, Float(arc4random_uniform(70) + 1)])
         
         let splashShader = SKShader(fileNamed: "splash.fsh")
         splashShader.uniforms = [
-            SKUniform(name: "resolution", vectorFloat3: size),
-            SKUniform(name: "image", texture: SKTexture(imageNamed: imageNamed))
+            SKUniform(name: "u_resolution", vectorFloat3: size),
+            SKUniform(name: "u_date", vectorFloat4: u_date),
+            SKUniform(name: "u_left_distribution", float: Float.randomFloat(min: 0.125, max: 3.95)),
+            SKUniform(name: "u_right_distribution", float: Float.randomFloat(min: 0.125, max: 3.95)),
+            SKUniform(name: "u_iterations", float: Float(arc4random_uniform(40) + 8)),
+            SKUniform(name: "u_image", texture: SKTexture(imageNamed: imageNamed))
         ]
         shaderContainer.shader = splashShader
     }
@@ -260,5 +269,11 @@ class GameScene: SKScene {
         self.addChild(beach)
     }
     
+}
+
+extension Float {
+    static func randomFloat(min: Float, max: Float) -> Float {
+        return (Float(arc4random()) / 0xFFFFFFFF) * (max - min) + min
+    }
 }
 

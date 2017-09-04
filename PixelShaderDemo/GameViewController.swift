@@ -37,7 +37,7 @@ enum Scene {
         case .lattice6:
             return (min: 0, max: 100)
         case .splash:
-            return (min: 0, max: 80)
+            return (min: 0, max: 150)
         case .flame:
             return (min: 0, max: 100)
         }
@@ -114,13 +114,13 @@ class GameViewController: UIViewController {
             scene?.updateRGBLightningEnergyTiming(for: value)
         case .waterReflection, .flame:
             scene?.updateReflectionIterations(for: value)
+        case .splash:
+            scene?.updateSplashIterations(for: value)
         case .water:
             fallthrough
         case .paintNoise:
             fallthrough
         case .lattice6:
-            fallthrough
-        case .splash:
             fallthrough
         case .none:
             break
