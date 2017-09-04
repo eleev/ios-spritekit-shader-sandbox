@@ -128,6 +128,11 @@ class GameScene: SKScene {
         createFlameDistanceShader(shaderContainer!)
     }
     
+    func lattice6Shader() {
+        shaderContainer = createShaderContainer()
+        createTriLattice6Shader(shaderContainer!)
+    }
+    
     // MARK: - Utility
     
     private func createShaderContainer(from imageNamed: String = "dummypixel.png") -> SKSpriteNode {
@@ -213,6 +218,16 @@ class GameScene: SKScene {
             SKUniform(name: "iterations", float: iterations)
         ]
         shaderContainer.shader = flameShader
+    }
+    
+    private func createTriLattice6Shader(_ shaderContainer: SKSpriteNode) {
+        let size = getSceneResolution()
+        
+        let latticeShasder = SKShader(fileNamed: "tri_lattice6.fsh")
+        latticeShasder.uniforms = [
+            SKUniform(name: "resolution", vectorFloat3: size)
+        ]
+        shaderContainer.shader = latticeShasder
     }
     
     private func getSceneResolution(multiplier: CGFloat = 1.0) -> float3 {
