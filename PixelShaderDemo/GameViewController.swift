@@ -20,6 +20,7 @@ enum Scene {
     case flame
     case lattice6
     case splash
+    case tron_road
     case none
     
     func shaderRange() -> ShaderUniformRange {
@@ -40,6 +41,8 @@ enum Scene {
             return (min: 0, max: 150)
         case .flame:
             return (min: 0, max: 100)
+        case .tron_road:
+            return (min: 0, max: 200)
         }
     }
 }
@@ -116,6 +119,8 @@ class GameViewController: UIViewController {
             scene?.updateReflectionIterations(for: value)
         case .splash:
             scene?.updateSplashIterations(for: value)
+        case .tron_road:
+            fallthrough
         case .water:
             fallthrough
         case .paintNoise:
@@ -171,5 +176,10 @@ class GameViewController: UIViewController {
         currentScene = .splash
     }
     
+    @IBAction func jqRaymarching(_ sender: UIButton) {
+        scene?.removeAllChildren()
+        scene?.tronRoadShader()
+        currentScene = .tron_road
+    }
 }
 
