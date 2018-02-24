@@ -142,6 +142,12 @@ class GameScene: SKScene {
         createSplashShader(shaderContainer!)
     }
     
+    func tronRoadShader() {
+        shaderContainer = createShaderContainer()
+        createTronRoad(shaderContainer!)
+        
+    }
+    
     // MARK: - Utility
     
     private func createShaderContainer(from imageNamed: String = "dummypixel.png") -> SKSpriteNode {
@@ -253,6 +259,16 @@ class GameScene: SKScene {
             SKUniform(name: "u_image", texture: SKTexture(imageNamed: imageNamed))
         ]
         shaderContainer.shader = splashShader
+    }
+    
+    private func createTronRoad(_ shaderContainer: SKSpriteNode) {
+        let size = getSceneResolution()
+        
+        let tronRoadShader = SKShader(fileNamed: "tron_road.fsh")
+        tronRoadShader.uniforms = [
+            SKUniform(name: "u_resolution", vectorFloat3: size)
+        ]
+        shaderContainer.shader = tronRoadShader
     }
     
     private func getSceneResolution(multiplier: CGFloat = 1.0) -> float3 {

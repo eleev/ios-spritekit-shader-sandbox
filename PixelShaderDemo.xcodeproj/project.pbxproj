@@ -27,7 +27,7 @@
 		A9BFCB321F543955008FCF4E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB311F543955008FCF4E /* .gitignore */; };
 		A9BFCB331F543CB0008FCF4E /* water_movement.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */; };
 		A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB301F54391A008FCF4E /* water_reflection.fsh */; };
-		A9E1D513204179F300CBD08F /* julia-quaternion-raymarching.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9E1D512204179F300CBD08F /* julia-quaternion-raymarching.fsh */; };
+		A9E1D513204179F300CBD08F /* tron_road.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9E1D512204179F300CBD08F /* tron_road.fsh */; };
 		A9E938B41F56FF44002229EF /* flame_raymarching.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9E938B31F56FF44002229EF /* flame_raymarching.fsh */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +76,7 @@
 		A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_movement.fsh; sourceTree = "<group>"; };
 		A9BFCB301F54391A008FCF4E /* water_reflection.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_reflection.fsh; sourceTree = "<group>"; };
 		A9BFCB311F543955008FCF4E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		A9E1D512204179F300CBD08F /* julia-quaternion-raymarching.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = "julia-quaternion-raymarching.fsh"; sourceTree = "<group>"; };
+		A9E1D512204179F300CBD08F /* tron_road.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = tron_road.fsh; sourceTree = "<group>"; };
 		A9E938B31F56FF44002229EF /* flame_raymarching.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = flame_raymarching.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,7 +191,7 @@
 				A9E938B31F56FF44002229EF /* flame_raymarching.fsh */,
 				A93BA65C1F5D2C1500F22CAF /* tri_lattice6.fsh */,
 				A9BA44641F5D61C50008BAE1 /* splash.fsh */,
-				A9E1D512204179F300CBD08F /* julia-quaternion-raymarching.fsh */,
+				A9E1D512204179F300CBD08F /* tron_road.fsh */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 				A93BA65D1F5D2C1500F22CAF /* tri_lattice6.fsh in Resources */,
 				A9BFCB0B1F542788008FCF4E /* LaunchScreen.storyboard in Resources */,
 				A9BFCB321F543955008FCF4E /* .gitignore in Resources */,
-				A9E1D513204179F300CBD08F /* julia-quaternion-raymarching.fsh in Resources */,
+				A9E1D513204179F300CBD08F /* tron_road.fsh in Resources */,
 				A9A280931F55819900F57F8D /* wave.fsh in Resources */,
 				A9BFCAFF1F542788008FCF4E /* Actions.sks in Resources */,
 			);
