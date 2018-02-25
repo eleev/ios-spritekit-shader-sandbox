@@ -8,7 +8,7 @@
 
 import XCTest
 
-class PixelShaderDemoUITests: XCTestCase {
+class UITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

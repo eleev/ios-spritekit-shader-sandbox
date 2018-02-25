@@ -9,7 +9,7 @@
 import XCTest
 @testable import PixelShaderDemo
 
-class PixelShaderDemoTests: XCTestCase {
+class Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()

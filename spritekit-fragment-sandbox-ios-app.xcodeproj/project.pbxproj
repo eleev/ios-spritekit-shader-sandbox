@@ -23,8 +23,8 @@
 		A9BFCB061F542788008FCF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB041F542788008FCF4E /* Main.storyboard */; };
 		A9BFCB081F542788008FCF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB071F542788008FCF4E /* Assets.xcassets */; };
 		A9BFCB0B1F542788008FCF4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB091F542788008FCF4E /* LaunchScreen.storyboard */; };
-		A9BFCB161F542788008FCF4E /* PixelShaderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCB151F542788008FCF4E /* PixelShaderDemoTests.swift */; };
-		A9BFCB211F542788008FCF4E /* PixelShaderDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCB201F542788008FCF4E /* PixelShaderDemoUITests.swift */; };
+		A9BFCB161F542788008FCF4E /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCB151F542788008FCF4E /* UnitTests.swift */; };
+		A9BFCB211F542788008FCF4E /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCB201F542788008FCF4E /* UITests.swift */; };
 		A9BFCB321F543955008FCF4E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB311F543955008FCF4E /* .gitignore */; };
 		A9BFCB331F543CB0008FCF4E /* water_movement.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */; };
 		A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB301F54391A008FCF4E /* water_reflection.fsh */; };
@@ -71,10 +71,10 @@
 		A9BFCB0A1F542788008FCF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9BFCB0C1F542788008FCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9BFCB111F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9BFCB151F542788008FCF4E /* PixelShaderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelShaderDemoTests.swift; sourceTree = "<group>"; };
+		A9BFCB151F542788008FCF4E /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		A9BFCB171F542788008FCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9BFCB1C1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9BFCB201F542788008FCF4E /* PixelShaderDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelShaderDemoUITests.swift; sourceTree = "<group>"; };
+		A9BFCB201F542788008FCF4E /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		A9BFCB221F542788008FCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_movement.fsh; sourceTree = "<group>"; };
 		A9BFCB301F54391A008FCF4E /* water_reflection.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_reflection.fsh; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 		A9BFCB141F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */ = {
 			isa = PBXGroup;
 			children = (
-				A9BFCB151F542788008FCF4E /* PixelShaderDemoTests.swift */,
+				A9BFCB151F542788008FCF4E /* UnitTests.swift */,
 				A9BFCB171F542788008FCF4E /* Info.plist */,
 			);
 			name = "spritekit-fragment-sandbox-ios-app";
@@ -219,7 +219,7 @@
 		A9BFCB1F1F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */ = {
 			isa = PBXGroup;
 			children = (
-				A9BFCB201F542788008FCF4E /* PixelShaderDemoUITests.swift */,
+				A9BFCB201F542788008FCF4E /* UITests.swift */,
 				A9BFCB221F542788008FCF4E /* Info.plist */,
 			);
 			name = "spritekit-fragment-sandbox-ios-app";
@@ -404,7 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9BFCB161F542788008FCF4E /* PixelShaderDemoTests.swift in Sources */,
+				A9BFCB161F542788008FCF4E /* UnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9BFCB211F542788008FCF4E /* PixelShaderDemoUITests.swift in Sources */,
+				A9BFCB211F542788008FCF4E /* UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
