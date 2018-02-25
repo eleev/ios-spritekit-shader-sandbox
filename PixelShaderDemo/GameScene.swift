@@ -104,6 +104,14 @@ class GameScene: SKScene {
         return shaderContainer?.shader?.updateUniform(named: "u_iterations", for: value)
     }
     
+    @discardableResult func updateMandelbrotIterations(for value: Float) -> Bool? {
+        return shaderContainer?.shader?.updateUniform(named: "iterations", for: value)
+    }
+    
+    @discardableResult func updateGTC14(for value: Float) -> Bool? {
+        return shaderContainer?.shader?.updateUniform(named: "iterations", for: value)
+    }
+    
     func waterReflection() {
         let shaderContainerMovement = createShaderContainer()
         createMovementShader(shaderContainerMovement, for: "sand")
@@ -145,7 +153,16 @@ class GameScene: SKScene {
     func tronRoadShader() {
         shaderContainer = createShaderContainer()
         createTronRoad(shaderContainer!)
-        
+    }
+    
+    func mandelbrotRecursive() {
+        shaderContainer = createShaderContainer()
+        createMandelbroRecursize(shaderContainer!)
+    }
+    
+    func gtc14() {
+        shaderContainer = createShaderContainer()
+        createGTC14(shaderContainer!)
     }
     
     // MARK: - Utility
@@ -270,6 +287,31 @@ class GameScene: SKScene {
         ]
         shaderContainer.shader = tronRoadShader
     }
+    
+    private func createMandelbroRecursize(_ shaderContainer: SKSpriteNode) {
+        let size = getSceneResolution()
+        let iterations: Float = 64
+        
+        let tronRoadShader = SKShader(fileNamed: "mandelbrot-recursive.fsh")
+        tronRoadShader.uniforms = [
+            SKUniform(name: "u_resolution", vectorFloat3: size),
+            SKUniform(name: "iterations", float: iterations)
+        ]
+        shaderContainer.shader = tronRoadShader
+    }
+    
+    private func createGTC14(_ shaderContainer: SKSpriteNode) {
+        let size = getSceneResolution()
+        let iterations: Float = 100
+        
+        let tronRoadShader = SKShader(fileNamed: "GTC14-conference.fsh")
+        tronRoadShader.uniforms = [
+            SKUniform(name: "u_resolution", vectorFloat3: size),
+            SKUniform(name: "iterations", float: iterations)
+        ]
+        shaderContainer.shader = tronRoadShader
+    }
+    
     
     private func getSceneResolution(multiplier: CGFloat = 1.0) -> float3 {
         let width = Float(self.frame.size.width * multiplier)
