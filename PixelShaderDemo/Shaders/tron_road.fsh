@@ -9,7 +9,10 @@ float smin( float a, float b, float k )
 void main(void)
 {
     vec2 R = u_resolution.xy,
-    uv = ( gl_FragCoord.xy - .5* R ) / R.y + .5;
+    uv = ( gl_FragCoord.xy - .5 * R ) / R.y + .5;
+    
+    // flip the image along y axis
+    uv = vec2(uv.x, 1.0 - uv.y);
     
     // sun
     float dist = length(uv-vec2(0.5,0.5));
