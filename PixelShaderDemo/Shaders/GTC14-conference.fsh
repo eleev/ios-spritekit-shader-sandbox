@@ -43,7 +43,7 @@ void main(void) {
     float h = 1.0;
     float t = 0.0;
     
-    for( int i=0; i<100; i++ ) {
+    for( int i=0; i<iterations; i++ ) {
         if( h<0.0001 || t>tmax ) break;
         h = map( ro + t*rd, u_time);
         t += h;
