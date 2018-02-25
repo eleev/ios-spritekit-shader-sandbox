@@ -13,6 +13,7 @@
 		A9A2809A1F55975500F57F8D /* lightning.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A280991F55975500F57F8D /* lightning.fsh */; };
 		A9A2809C1F55AA5B00F57F8D /* UISlider+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2809B1F55AA5B00F57F8D /* UISlider+Range.swift */; };
 		A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */; };
+		A9AC03BE2042C5D400FF8ACC /* GTC14-conference.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */; };
 		A9BA44651F5D61C50008BAE1 /* splash.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BA44641F5D61C50008BAE1 /* splash.fsh */; };
 		A9BFCAFB1F542788008FCF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */; };
 		A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCAFC1F542788008FCF4E /* GameScene.sks */; };
@@ -27,6 +28,7 @@
 		A9BFCB321F543955008FCF4E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB311F543955008FCF4E /* .gitignore */; };
 		A9BFCB331F543CB0008FCF4E /* water_movement.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */; };
 		A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCB301F54391A008FCF4E /* water_reflection.fsh */; };
+		A9D160312042BF87003722C8 /* mandelbrot-recursive.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9D160302042BF87003722C8 /* mandelbrot-recursive.fsh */; };
 		A9E1D513204179F300CBD08F /* tron_road.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9E1D512204179F300CBD08F /* tron_road.fsh */; };
 		A9E938B41F56FF44002229EF /* flame_raymarching.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9E938B31F56FF44002229EF /* flame_raymarching.fsh */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,7 @@
 		A9A280991F55975500F57F8D /* lightning.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lightning.fsh; sourceTree = "<group>"; };
 		A9A2809B1F55AA5B00F57F8D /* UISlider+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISlider+Range.swift"; sourceTree = "<group>"; };
 		A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = paint_noise.fsh; sourceTree = "<group>"; };
+		A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = "GTC14-conference.fsh"; sourceTree = "<group>"; };
 		A9BA44641F5D61C50008BAE1 /* splash.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = splash.fsh; sourceTree = "<group>"; };
 		A9BFCAF71F542788008FCF4E /* PixelShaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelShaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 		A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_movement.fsh; sourceTree = "<group>"; };
 		A9BFCB301F54391A008FCF4E /* water_reflection.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_reflection.fsh; sourceTree = "<group>"; };
 		A9BFCB311F543955008FCF4E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A9D160302042BF87003722C8 /* mandelbrot-recursive.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = "mandelbrot-recursive.fsh"; sourceTree = "<group>"; };
 		A9E1D512204179F300CBD08F /* tron_road.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = tron_road.fsh; sourceTree = "<group>"; };
 		A9E938B31F56FF44002229EF /* flame_raymarching.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = flame_raymarching.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +196,8 @@
 				A93BA65C1F5D2C1500F22CAF /* tri_lattice6.fsh */,
 				A9BA44641F5D61C50008BAE1 /* splash.fsh */,
 				A9E1D512204179F300CBD08F /* tron_road.fsh */,
+				A9D160302042BF87003722C8 /* mandelbrot-recursive.fsh */,
+				A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -304,9 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A2809A1F55975500F57F8D /* lightning.fsh in Resources */,
+				A9AC03BE2042C5D400FF8ACC /* GTC14-conference.fsh in Resources */,
 				A9BFCB331F543CB0008FCF4E /* water_movement.fsh in Resources */,
 				A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */,
 				A9BFCB061F542788008FCF4E /* Main.storyboard in Resources */,
+				A9D160312042BF87003722C8 /* mandelbrot-recursive.fsh in Resources */,
 				A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */,
 				A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */,
 				A9E938B41F56FF44002229EF /* flame_raymarching.fsh in Resources */,
