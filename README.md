@@ -18,7 +18,7 @@ An `iOS` project demonstrating how to use `GLSL` Shaders with `SpriteKit` framew
 <img src="https://user-images.githubusercontent.com/5098753/36643377-6592f378-1a5b-11e8-9490-95052d900e58.gif" width="350">
 
 ## Spots
-<img src="https://user-images.githubusercontent.com/5098753/36643376-6573f86a-1a5b-11e8-802a-42d7dd168f1e.giff" width="350">
+<img src="https://user-images.githubusercontent.com/5098753/36643376-6573f86a-1a5b-11e8-802a-42d7dd168f1e.gif" width="350">
 
 ## Lattice
 <img src="https://user-images.githubusercontent.com/5098753/36643374-6534de64-1a5b-11e8-83a8-96af89c84ddd.gif" width="350">
