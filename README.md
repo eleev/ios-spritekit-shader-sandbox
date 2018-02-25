@@ -5,8 +5,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
 
-# PixelShaderDemo
-Demo project demonstrating how to use `GLSL` Shaders with `SpriteKit` in an iOS Application 👾. More shaders will be added on a regular basis.
+# SpriteKit Fragment Sandbox
+An `iOS` project demonstrating how to use `GLSL` Shaders with `SpriteKit` framework 👾. The purpose of the app is to serve as a sandbox that allows to quicly prototype and experiment with `fragment`  shaders. More shaders will be added on a regular basis.
 
 ## Tron Road
 <img src="https://user-images.githubusercontent.com/5098753/36630070-72668dc0-1971-11e8-8cea-b47389e5044a.gif" width="350">
