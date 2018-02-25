@@ -596,7 +596,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EK3QDL7K69;
+				DEVELOPMENT_TEAM = T3K58FE38R;
 				INFOPLIST_FILE = PixelShaderDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = projectk.io.PixelShaderDemoTests;
@@ -613,7 +613,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EK3QDL7K69;
+				DEVELOPMENT_TEAM = T3K58FE38R;
 				INFOPLIST_FILE = PixelShaderDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = projectk.io.PixelShaderDemoTests;
@@ -629,7 +629,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EK3QDL7K69;
+				DEVELOPMENT_TEAM = T3K58FE38R;
 				INFOPLIST_FILE = PixelShaderDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = projectk.io.PixelShaderDemoUITests;
@@ -645,7 +645,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EK3QDL7K69;
+				DEVELOPMENT_TEAM = T3K58FE38R;
 				INFOPLIST_FILE = PixelShaderDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = projectk.io.PixelShaderDemoUITests;
