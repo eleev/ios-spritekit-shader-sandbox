@@ -1,15 +1,14 @@
 //
-//  PixelShaderDemoTests.swift
-//  PixelShaderDemoTests
+//  spritekit_fragment_sandbox_ios_appTests.swift
+//  spritekit-fragment-sandbox-ios-appTests
 //
-//  Created by Astemir Eleev on 28/08/2017.
-//  Copyright © 2017 Astemir Eleev. All rights reserved.
+//  Created by Astemir Eleev on 25/02/2018.
+//  Copyright © 2018 Astemir Eleev. All rights reserved.
 //
 
 import XCTest
-@testable import PixelShaderDemo
 
-class Tests: XCTestCase {
+class spritekit_fragment_sandbox_ios_appTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

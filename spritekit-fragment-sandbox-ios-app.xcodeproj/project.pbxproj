@@ -14,11 +14,10 @@
 		A9A2809C1F55AA5B00F57F8D /* UISlider+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2809B1F55AA5B00F57F8D /* UISlider+Range.swift */; };
 		A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */; };
 		A9AC03BE2042C5D400FF8ACC /* GTC14-conference.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */; };
-		A9AC03CA20430BFA00FF8ACC /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC03C520430BFA00FF8ACC /* UITests.swift */; };
-		A9AC03CB20430BFA00FF8ACC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9AC03C620430BFA00FF8ACC /* Info.plist */; };
-		A9AC03CC20430BFA00FF8ACC /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC03C820430BFA00FF8ACC /* UnitTests.swift */; };
-		A9AC03CD20430BFA00FF8ACC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9AC03C920430BFA00FF8ACC /* Info.plist */; };
 		A9AC03D020430C4500FF8ACC /* pixel_shader_demo_001.gif in Resources */ = {isa = PBXBuildFile; fileRef = A9AC03CF20430C4500FF8ACC /* pixel_shader_demo_001.gif */; };
+		A9AC03D22043143300FF8ACC /* curvature-3d.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9AC03D12043143300FF8ACC /* curvature-3d.fsh */; };
+		A9AC03DD204315D400FF8ACC /* spritekit_fragment_sandbox_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC03DC204315D400FF8ACC /* spritekit_fragment_sandbox_ios_appTests.swift */; };
+		A9AC03EB204315E300FF8ACC /* spritekit_fragment_sandbox_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC03EA204315E300FF8ACC /* spritekit_fragment_sandbox_ios_appUITests.swift */; };
 		A9BA44651F5D61C50008BAE1 /* splash.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BA44641F5D61C50008BAE1 /* splash.fsh */; };
 		A9BFCAFB1F542788008FCF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */; };
 		A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9BFCAFC1F542788008FCF4E /* GameScene.sks */; };
@@ -37,19 +36,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A9BFCB121F542788008FCF4E /* PBXContainerItemProxy */ = {
+		A9AC03DF204315D400FF8ACC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9BFCAEF1F542788008FCF4E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A9BFCAF61F542788008FCF4E;
-			remoteInfo = PixelShaderDemo;
+			remoteInfo = "spritekit-fragment-sandbox-ios-app";
 		};
-		A9BFCB1D1F542788008FCF4E /* PBXContainerItemProxy */ = {
+		A9AC03ED204315E300FF8ACC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9BFCAEF1F542788008FCF4E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A9BFCAF61F542788008FCF4E;
-			remoteInfo = PixelShaderDemo;
+			remoteInfo = "spritekit-fragment-sandbox-ios-app";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,11 +60,14 @@
 		A9A2809B1F55AA5B00F57F8D /* UISlider+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISlider+Range.swift"; sourceTree = "<group>"; };
 		A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = paint_noise.fsh; sourceTree = "<group>"; };
 		A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = "GTC14-conference.fsh"; sourceTree = "<group>"; };
-		A9AC03C520430BFA00FF8ACC /* UITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
-		A9AC03C620430BFA00FF8ACC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9AC03C820430BFA00FF8ACC /* UnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
-		A9AC03C920430BFA00FF8ACC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9AC03CF20430C4500FF8ACC /* pixel_shader_demo_001.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pixel_shader_demo_001.gif; sourceTree = "<group>"; };
+		A9AC03D12043143300FF8ACC /* curvature-3d.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = "curvature-3d.fsh"; sourceTree = "<group>"; };
+		A9AC03DA204315D400FF8ACC /* spritekit-fragment-sandbox-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9AC03DC204315D400FF8ACC /* spritekit_fragment_sandbox_ios_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spritekit_fragment_sandbox_ios_appTests.swift; sourceTree = "<group>"; };
+		A9AC03DE204315D400FF8ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9AC03E8204315E300FF8ACC /* spritekit-fragment-sandbox-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9AC03EA204315E300FF8ACC /* spritekit_fragment_sandbox_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spritekit_fragment_sandbox_ios_appUITests.swift; sourceTree = "<group>"; };
+		A9AC03EC204315E300FF8ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9BA44641F5D61C50008BAE1 /* splash.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = splash.fsh; sourceTree = "<group>"; };
 		A9BFCAF71F542788008FCF4E /* spritekit-fragment-sandbox-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,8 +79,6 @@
 		A9BFCB071F542788008FCF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9BFCB0A1F542788008FCF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9BFCB0C1F542788008FCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9BFCB111F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9BFCB1C1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_movement.fsh; sourceTree = "<group>"; };
 		A9BFCB301F54391A008FCF4E /* water_reflection.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_reflection.fsh; sourceTree = "<group>"; };
 		A9BFCB311F543955008FCF4E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -88,21 +88,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A9AC03D7204315D400FF8ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9AC03E5204315E300FF8ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9BFCAF41F542788008FCF4E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9BFCB0E1F542788008FCF4E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9BFCB191F542788008FCF4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -163,24 +163,6 @@
 			path = "Game-Scenes";
 			sourceTree = "<group>";
 		};
-		A9AC03C420430BFA00FF8ACC /* spritekit-fragment-sandbox-ios-app-UITests */ = {
-			isa = PBXGroup;
-			children = (
-				A9AC03C520430BFA00FF8ACC /* UITests.swift */,
-				A9AC03C620430BFA00FF8ACC /* Info.plist */,
-			);
-			path = "spritekit-fragment-sandbox-ios-app-UITests";
-			sourceTree = "<group>";
-		};
-		A9AC03C720430BFA00FF8ACC /* spritekit-fragment-sandbox-ios-app-UnitTests */ = {
-			isa = PBXGroup;
-			children = (
-				A9AC03C820430BFA00FF8ACC /* UnitTests.swift */,
-				A9AC03C920430BFA00FF8ACC /* Info.plist */,
-			);
-			path = "spritekit-fragment-sandbox-ios-app-UnitTests";
-			sourceTree = "<group>";
-		};
 		A9AC03CE20430C4500FF8ACC /* documentation-resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,14 +171,32 @@
 			path = "documentation-resources";
 			sourceTree = "<group>";
 		};
+		A9AC03DB204315D400FF8ACC /* spritekit-fragment-sandbox-ios-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9AC03DC204315D400FF8ACC /* spritekit_fragment_sandbox_ios_appTests.swift */,
+				A9AC03DE204315D400FF8ACC /* Info.plist */,
+			);
+			path = "spritekit-fragment-sandbox-ios-appTests";
+			sourceTree = "<group>";
+		};
+		A9AC03E9204315E300FF8ACC /* spritekit-fragment-sandbox-ios-appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A9AC03EA204315E300FF8ACC /* spritekit_fragment_sandbox_ios_appUITests.swift */,
+				A9AC03EC204315E300FF8ACC /* Info.plist */,
+			);
+			path = "spritekit-fragment-sandbox-ios-appUITests";
+			sourceTree = "<group>";
+		};
 		A9BFCAEE1F542788008FCF4E = {
 			isa = PBXGroup;
 			children = (
 				A9AC03CE20430C4500FF8ACC /* documentation-resources */,
 				A9BFCB311F543955008FCF4E /* .gitignore */,
 				A9BFCAF91F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */,
-				A9AC03C420430BFA00FF8ACC /* spritekit-fragment-sandbox-ios-app-UITests */,
-				A9AC03C720430BFA00FF8ACC /* spritekit-fragment-sandbox-ios-app-UnitTests */,
+				A9AC03DB204315D400FF8ACC /* spritekit-fragment-sandbox-ios-appTests */,
+				A9AC03E9204315E300FF8ACC /* spritekit-fragment-sandbox-ios-appUITests */,
 				A9BFCAF81F542788008FCF4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -205,8 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				A9BFCAF71F542788008FCF4E /* spritekit-fragment-sandbox-ios-app.app */,
-				A9BFCB111F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests.xctest */,
-				A9BFCB1C1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests.xctest */,
+				A9AC03DA204315D400FF8ACC /* spritekit-fragment-sandbox-ios-appTests.xctest */,
+				A9AC03E8204315E300FF8ACC /* spritekit-fragment-sandbox-ios-appUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +241,7 @@
 				A9E1D512204179F300CBD08F /* tron_road.fsh */,
 				A9D160302042BF87003722C8 /* mandelbrot-recursive.fsh */,
 				A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */,
+				A9AC03D12043143300FF8ACC /* curvature-3d.fsh */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -248,6 +249,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A9AC03D9204315D400FF8ACC /* spritekit-fragment-sandbox-ios-appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9AC03E1204315D400FF8ACC /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appTests" */;
+			buildPhases = (
+				A9AC03D6204315D400FF8ACC /* Sources */,
+				A9AC03D7204315D400FF8ACC /* Frameworks */,
+				A9AC03D8204315D400FF8ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9AC03E0204315D400FF8ACC /* PBXTargetDependency */,
+			);
+			name = "spritekit-fragment-sandbox-ios-appTests";
+			productName = "spritekit-fragment-sandbox-ios-appTests";
+			productReference = A9AC03DA204315D400FF8ACC /* spritekit-fragment-sandbox-ios-appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A9AC03E7204315E300FF8ACC /* spritekit-fragment-sandbox-ios-appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9AC03EF204315E300FF8ACC /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appUITests" */;
+			buildPhases = (
+				A9AC03E4204315E300FF8ACC /* Sources */,
+				A9AC03E5204315E300FF8ACC /* Frameworks */,
+				A9AC03E6204315E300FF8ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9AC03EE204315E300FF8ACC /* PBXTargetDependency */,
+			);
+			name = "spritekit-fragment-sandbox-ios-appUITests";
+			productName = "spritekit-fragment-sandbox-ios-appUITests";
+			productReference = A9AC03E8204315E300FF8ACC /* spritekit-fragment-sandbox-ios-appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A9BFCAF61F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9BFCB251F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-app" */;
@@ -265,65 +302,29 @@
 			productReference = A9BFCAF71F542788008FCF4E /* spritekit-fragment-sandbox-ios-app.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A9BFCB101F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9BFCB281F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appTests" */;
-			buildPhases = (
-				A9BFCB0D1F542788008FCF4E /* Sources */,
-				A9BFCB0E1F542788008FCF4E /* Frameworks */,
-				A9BFCB0F1F542788008FCF4E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A9BFCB131F542788008FCF4E /* PBXTargetDependency */,
-			);
-			name = "spritekit-fragment-sandbox-ios-appTests";
-			productName = PixelShaderDemoTests;
-			productReference = A9BFCB111F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A9BFCB1B1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9BFCB2B1F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appUITests" */;
-			buildPhases = (
-				A9BFCB181F542788008FCF4E /* Sources */,
-				A9BFCB191F542788008FCF4E /* Frameworks */,
-				A9BFCB1A1F542788008FCF4E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A9BFCB1E1F542788008FCF4E /* PBXTargetDependency */,
-			);
-			name = "spritekit-fragment-sandbox-ios-appUITests";
-			productName = PixelShaderDemoUITests;
-			productReference = A9BFCB1C1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		A9BFCAEF1F542788008FCF4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Astemir Eleev";
 				TargetAttributes = {
+					A9AC03D9204315D400FF8ACC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A9BFCAF61F542788008FCF4E;
+					};
+					A9AC03E7204315E300FF8ACC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A9BFCAF61F542788008FCF4E;
+					};
 					A9BFCAF61F542788008FCF4E = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
-					};
-					A9BFCB101F542788008FCF4E = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = A9BFCAF61F542788008FCF4E;
-					};
-					A9BFCB1B1F542788008FCF4E = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = A9BFCAF61F542788008FCF4E;
 					};
 				};
 			};
@@ -341,28 +342,41 @@
 			projectRoot = "";
 			targets = (
 				A9BFCAF61F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */,
-				A9BFCB101F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests */,
-				A9BFCB1B1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests */,
+				A9AC03D9204315D400FF8ACC /* spritekit-fragment-sandbox-ios-appTests */,
+				A9AC03E7204315E300FF8ACC /* spritekit-fragment-sandbox-ios-appUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A9AC03D8204315D400FF8ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9AC03E6204315E300FF8ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9BFCAF51F542788008FCF4E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A9A2809A1F55975500F57F8D /* lightning.fsh in Resources */,
 				A9AC03BE2042C5D400FF8ACC /* GTC14-conference.fsh in Resources */,
-				A9AC03CB20430BFA00FF8ACC /* Info.plist in Resources */,
 				A9BFCB331F543CB0008FCF4E /* water_movement.fsh in Resources */,
 				A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */,
 				A9BFCB061F542788008FCF4E /* Main.storyboard in Resources */,
 				A9D160312042BF87003722C8 /* mandelbrot-recursive.fsh in Resources */,
 				A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */,
 				A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */,
-				A9AC03CD20430BFA00FF8ACC /* Info.plist in Resources */,
 				A9E938B41F56FF44002229EF /* flame_raymarching.fsh in Resources */,
+				A9AC03D22043143300FF8ACC /* curvature-3d.fsh in Resources */,
 				A9BFCB081F542788008FCF4E /* Assets.xcassets in Resources */,
 				A9BA44651F5D61C50008BAE1 /* splash.fsh in Resources */,
 				A9AC03D020430C4500FF8ACC /* pixel_shader_demo_001.gif in Resources */,
@@ -375,30 +389,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9BFCB0F1F542788008FCF4E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9BFCB1A1F542788008FCF4E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A9AC03D6204315D400FF8ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9AC03DD204315D400FF8ACC /* spritekit_fragment_sandbox_ios_appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9AC03E4204315E300FF8ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9AC03EB204315E300FF8ACC /* spritekit_fragment_sandbox_ios_appUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9BFCAF31F542788008FCF4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A9A2809C1F55AA5B00F57F8D /* UISlider+Range.swift in Sources */,
-				A9AC03CC20430BFA00FF8ACC /* UnitTests.swift in Sources */,
-				A9AC03CA20430BFA00FF8ACC /* UITests.swift in Sources */,
 				A9BFCB011F542788008FCF4E /* GameScene.swift in Sources */,
 				A9BFCB031F542788008FCF4E /* GameViewController.swift in Sources */,
 				A9A280961F55931F00F57F8D /* SKShader+UniformUpdates.swift in Sources */,
@@ -406,32 +420,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9BFCB0D1F542788008FCF4E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9BFCB181F542788008FCF4E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A9BFCB131F542788008FCF4E /* PBXTargetDependency */ = {
+		A9AC03E0204315D400FF8ACC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A9BFCAF61F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */;
-			targetProxy = A9BFCB121F542788008FCF4E /* PBXContainerItemProxy */;
+			targetProxy = A9AC03DF204315D400FF8ACC /* PBXContainerItemProxy */;
 		};
-		A9BFCB1E1F542788008FCF4E /* PBXTargetDependency */ = {
+		A9AC03EE204315E300FF8ACC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A9BFCAF61F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */;
-			targetProxy = A9BFCB1D1F542788008FCF4E /* PBXContainerItemProxy */;
+			targetProxy = A9AC03ED204315E300FF8ACC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -455,6 +455,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A9AC03E2204315D400FF8ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3K58FE38R;
+				INFOPLIST_FILE = "spritekit-fragment-sandbox-ios-appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.spritekit-fragment-sandbox-ios-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spritekit-fragment-sandbox-ios-app.app/spritekit-fragment-sandbox-ios-app";
+			};
+			name = Debug;
+		};
+		A9AC03E3204315D400FF8ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3K58FE38R;
+				INFOPLIST_FILE = "spritekit-fragment-sandbox-ios-appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.spritekit-fragment-sandbox-ios-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spritekit-fragment-sandbox-ios-app.app/spritekit-fragment-sandbox-ios-app";
+			};
+			name = Release;
+		};
+		A9AC03F0204315E300FF8ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3K58FE38R;
+				INFOPLIST_FILE = "spritekit-fragment-sandbox-ios-appUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.spritekit-fragment-sandbox-ios-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "spritekit-fragment-sandbox-ios-app";
+			};
+			name = Debug;
+		};
+		A9AC03F1204315E300FF8ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3K58FE38R;
+				INFOPLIST_FILE = "spritekit-fragment-sandbox-ios-appUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.spritekit-fragment-sandbox-ios-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "spritekit-fragment-sandbox-ios-app";
+			};
+			name = Release;
+		};
 		A9BFCB231F542788008FCF4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -594,75 +660,27 @@
 			};
 			name = Release;
 		};
-		A9BFCB291F542788008FCF4E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = PixelShaderDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = projectk.io.PixelShaderDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spritekit-fragment-sandbox-ios-app.app/spritekit-fragment-sandbox-ios-app";
-			};
-			name = Debug;
-		};
-		A9BFCB2A1F542788008FCF4E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = PixelShaderDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = projectk.io.PixelShaderDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spritekit-fragment-sandbox-ios-app.app/spritekit-fragment-sandbox-ios-app";
-			};
-			name = Release;
-		};
-		A9BFCB2C1F542788008FCF4E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = PixelShaderDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = projectk.io.PixelShaderDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PixelShaderDemo;
-			};
-			name = Debug;
-		};
-		A9BFCB2D1F542788008FCF4E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = PixelShaderDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = projectk.io.PixelShaderDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PixelShaderDemo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A9AC03E1204315D400FF8ACC /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9AC03E2204315D400FF8ACC /* Debug */,
+				A9AC03E3204315D400FF8ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9AC03EF204315E300FF8ACC /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9AC03F0204315E300FF8ACC /* Debug */,
+				A9AC03F1204315E300FF8ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A9BFCAF21F542788008FCF4E /* Build configuration list for PBXProject "spritekit-fragment-sandbox-ios-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -677,24 +695,6 @@
 			buildConfigurations = (
 				A9BFCB261F542788008FCF4E /* Debug */,
 				A9BFCB271F542788008FCF4E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A9BFCB281F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9BFCB291F542788008FCF4E /* Debug */,
-				A9BFCB2A1F542788008FCF4E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A9BFCB2B1F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9BFCB2C1F542788008FCF4E /* Debug */,
-				A9BFCB2D1F542788008FCF4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
