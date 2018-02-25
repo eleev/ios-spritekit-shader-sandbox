@@ -40,5 +40,5 @@ An `iOS` project demonstrating how to use `GLSL` Shaders with `SpriteKit` framew
 
 # Licence 
 
-`SpriteKit-Fragment-Sandbox-iOS-App` is available under the `MIT` license. See the [LICENSE](https://github.com/jVirus/PixelShaderDemo/blob/master/LICENSE) file for more info.
+`spritekit-fragment-sandbox-ios-app` is available under the `MIT` license. See the [LICENSE](https://github.com/jVirus/PixelShaderDemo/blob/master/LICENSE) file for more info.
 
