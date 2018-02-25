@@ -21,6 +21,8 @@ enum Scene {
     case lattice6
     case splash
     case tron_road
+    case mandelbrot_recursive
+    case gtc14
     case none
     
     func shaderRange() -> ShaderUniformRange {
@@ -43,6 +45,10 @@ enum Scene {
             return (min: 0, max: 100)
         case .tron_road:
             return (min: 0, max: 200)
+        case .mandelbrot_recursive:
+            return (min: 0, max: 100)
+        case .gtc14:
+            return (min: 0, max: 100)
         }
     }
 }
@@ -88,16 +94,12 @@ class GameViewController: UIViewController {
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
+        return .portrait
+//        if UIDevice.current.userInterfaceIdiom == .phone {
+//            return .allButUpsideDown
+//        } else {
+//            return .all
+//        }
     }
 
     override var prefersStatusBarHidden: Bool {
@@ -119,6 +121,10 @@ class GameViewController: UIViewController {
             scene?.updateReflectionIterations(for: value)
         case .splash:
             scene?.updateSplashIterations(for: value)
+        case .mandelbrot_recursive:
+            scene?.updateMandelbrotIterations(for: value)
+        case .gtc14:
+            scene?.updateGTC14(for: value)
         case .tron_road:
             fallthrough
         case .water:
@@ -129,6 +135,7 @@ class GameViewController: UIViewController {
             fallthrough
         case .none:
             break
+        
         }
     }
     
@@ -180,6 +187,18 @@ class GameViewController: UIViewController {
         scene?.removeAllChildren()
         scene?.tronRoadShader()
         currentScene = .tron_road
+    }
+    
+    @IBAction func mandelbrotRecursive(_ sender: UIButton) {
+        scene?.removeAllChildren()
+        scene?.mandelbrotRecursive()
+        currentScene = .mandelbrot_recursive
+    }
+    
+    @IBAction func gtc14(_ sender: UIButton) {
+        scene?.removeAllActions()
+        scene?.gtc14()
+        currentScene = .gtc14
     }
 }
 
