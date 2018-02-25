@@ -60,7 +60,7 @@
 		A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = paint_noise.fsh; sourceTree = "<group>"; };
 		A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = "GTC14-conference.fsh"; sourceTree = "<group>"; };
 		A9BA44641F5D61C50008BAE1 /* splash.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = splash.fsh; sourceTree = "<group>"; };
-		A9BFCAF71F542788008FCF4E /* PixelShaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelShaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9BFCAF71F542788008FCF4E /* spritekit-fragment-sandbox-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9BFCAFC1F542788008FCF4E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A9BFCAFE1F542788008FCF4E /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -70,10 +70,10 @@
 		A9BFCB071F542788008FCF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9BFCB0A1F542788008FCF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9BFCB0C1F542788008FCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9BFCB111F542788008FCF4E /* PixelShaderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelShaderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9BFCB111F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCB151F542788008FCF4E /* PixelShaderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelShaderDemoTests.swift; sourceTree = "<group>"; };
 		A9BFCB171F542788008FCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9BFCB1C1F542788008FCF4E /* PixelShaderDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelShaderDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9BFCB1C1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFCB201F542788008FCF4E /* PixelShaderDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelShaderDemoUITests.swift; sourceTree = "<group>"; };
 		A9BFCB221F542788008FCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = water_movement.fsh; sourceTree = "<group>"; };
@@ -126,14 +126,56 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A9AC03BF2042E89E00FF8ACC /* View-Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9BFCB021F542788008FCF4E /* GameViewController.swift */,
+			);
+			path = "View-Controller";
+			sourceTree = "<group>";
+		};
+		A9AC03C02042E8AC00FF8ACC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A9BFCB001F542788008FCF4E /* GameScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A9AC03C12042E8B600FF8ACC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A9BFCB071F542788008FCF4E /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A9AC03C22042E8C400FF8ACC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9BFCB041F542788008FCF4E /* Main.storyboard */,
+				A9BFCB091F542788008FCF4E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A9AC03C32042E8DB00FF8ACC /* Game-Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A9BFCAFC1F542788008FCF4E /* GameScene.sks */,
+				A9BFCAFE1F542788008FCF4E /* Actions.sks */,
+			);
+			path = "Game-Scenes";
+			sourceTree = "<group>";
+		};
 		A9BFCAEE1F542788008FCF4E = {
 			isa = PBXGroup;
 			children = (
 				A9A1B83C1F5460C6003FDEE1 /* README_RESOURCES */,
 				A9BFCB311F543955008FCF4E /* .gitignore */,
-				A9BFCAF91F542788008FCF4E /* PixelShaderDemo */,
-				A9BFCB141F542788008FCF4E /* PixelShaderDemoTests */,
-				A9BFCB1F1F542788008FCF4E /* PixelShaderDemoUITests */,
+				A9BFCAF91F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */,
+				A9BFCB141F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */,
+				A9BFCB1F1F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */,
 				A9BFCAF81F542788008FCF4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,46 +183,46 @@
 		A9BFCAF81F542788008FCF4E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9BFCAF71F542788008FCF4E /* PixelShaderDemo.app */,
-				A9BFCB111F542788008FCF4E /* PixelShaderDemoTests.xctest */,
-				A9BFCB1C1F542788008FCF4E /* PixelShaderDemoUITests.xctest */,
+				A9BFCAF71F542788008FCF4E /* spritekit-fragment-sandbox-ios-app.app */,
+				A9BFCB111F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests.xctest */,
+				A9BFCB1C1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A9BFCAF91F542788008FCF4E /* PixelShaderDemo */ = {
+		A9BFCAF91F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */ = {
 			isa = PBXGroup;
 			children = (
+				A9AC03C32042E8DB00FF8ACC /* Game-Scenes */,
+				A9AC03C22042E8C400FF8ACC /* View */,
+				A9AC03C12042E8B600FF8ACC /* Assets */,
+				A9AC03C02042E8AC00FF8ACC /* Scenes */,
+				A9AC03BF2042E89E00FF8ACC /* View-Controller */,
 				A9A280941F5592D700F57F8D /* Extensions */,
 				A9BFCB2E1F543906008FCF4E /* Shaders */,
 				A9BFCAFA1F542788008FCF4E /* AppDelegate.swift */,
-				A9BFCAFC1F542788008FCF4E /* GameScene.sks */,
-				A9BFCAFE1F542788008FCF4E /* Actions.sks */,
-				A9BFCB001F542788008FCF4E /* GameScene.swift */,
-				A9BFCB021F542788008FCF4E /* GameViewController.swift */,
-				A9BFCB041F542788008FCF4E /* Main.storyboard */,
-				A9BFCB071F542788008FCF4E /* Assets.xcassets */,
-				A9BFCB091F542788008FCF4E /* LaunchScreen.storyboard */,
 				A9BFCB0C1F542788008FCF4E /* Info.plist */,
 			);
-			path = PixelShaderDemo;
+			path = "spritekit-fragment-sandbox-ios-app";
 			sourceTree = "<group>";
 		};
-		A9BFCB141F542788008FCF4E /* PixelShaderDemoTests */ = {
+		A9BFCB141F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */ = {
 			isa = PBXGroup;
 			children = (
 				A9BFCB151F542788008FCF4E /* PixelShaderDemoTests.swift */,
 				A9BFCB171F542788008FCF4E /* Info.plist */,
 			);
+			name = "spritekit-fragment-sandbox-ios-app";
 			path = PixelShaderDemoTests;
 			sourceTree = "<group>";
 		};
-		A9BFCB1F1F542788008FCF4E /* PixelShaderDemoUITests */ = {
+		A9BFCB1F1F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */ = {
 			isa = PBXGroup;
 			children = (
 				A9BFCB201F542788008FCF4E /* PixelShaderDemoUITests.swift */,
 				A9BFCB221F542788008FCF4E /* Info.plist */,
 			);
+			name = "spritekit-fragment-sandbox-ios-app";
 			path = PixelShaderDemoUITests;
 			sourceTree = "<group>";
 		};
@@ -205,9 +247,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A9BFCAF61F542788008FCF4E /* PixelShaderDemo */ = {
+		A9BFCAF61F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9BFCB251F542788008FCF4E /* Build configuration list for PBXNativeTarget "PixelShaderDemo" */;
+			buildConfigurationList = A9BFCB251F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-app" */;
 			buildPhases = (
 				A9BFCAF31F542788008FCF4E /* Sources */,
 				A9BFCAF41F542788008FCF4E /* Frameworks */,
@@ -217,14 +259,14 @@
 			);
 			dependencies = (
 			);
-			name = PixelShaderDemo;
+			name = "spritekit-fragment-sandbox-ios-app";
 			productName = PixelShaderDemo;
-			productReference = A9BFCAF71F542788008FCF4E /* PixelShaderDemo.app */;
+			productReference = A9BFCAF71F542788008FCF4E /* spritekit-fragment-sandbox-ios-app.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A9BFCB101F542788008FCF4E /* PixelShaderDemoTests */ = {
+		A9BFCB101F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9BFCB281F542788008FCF4E /* Build configuration list for PBXNativeTarget "PixelShaderDemoTests" */;
+			buildConfigurationList = A9BFCB281F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appTests" */;
 			buildPhases = (
 				A9BFCB0D1F542788008FCF4E /* Sources */,
 				A9BFCB0E1F542788008FCF4E /* Frameworks */,
@@ -235,14 +277,14 @@
 			dependencies = (
 				A9BFCB131F542788008FCF4E /* PBXTargetDependency */,
 			);
-			name = PixelShaderDemoTests;
+			name = "spritekit-fragment-sandbox-ios-appTests";
 			productName = PixelShaderDemoTests;
-			productReference = A9BFCB111F542788008FCF4E /* PixelShaderDemoTests.xctest */;
+			productReference = A9BFCB111F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A9BFCB1B1F542788008FCF4E /* PixelShaderDemoUITests */ = {
+		A9BFCB1B1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9BFCB2B1F542788008FCF4E /* Build configuration list for PBXNativeTarget "PixelShaderDemoUITests" */;
+			buildConfigurationList = A9BFCB2B1F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appUITests" */;
 			buildPhases = (
 				A9BFCB181F542788008FCF4E /* Sources */,
 				A9BFCB191F542788008FCF4E /* Frameworks */,
@@ -253,9 +295,9 @@
 			dependencies = (
 				A9BFCB1E1F542788008FCF4E /* PBXTargetDependency */,
 			);
-			name = PixelShaderDemoUITests;
+			name = "spritekit-fragment-sandbox-ios-appUITests";
 			productName = PixelShaderDemoUITests;
-			productReference = A9BFCB1C1F542788008FCF4E /* PixelShaderDemoUITests.xctest */;
+			productReference = A9BFCB1C1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -284,7 +326,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9BFCAF21F542788008FCF4E /* Build configuration list for PBXProject "PixelShaderDemo" */;
+			buildConfigurationList = A9BFCAF21F542788008FCF4E /* Build configuration list for PBXProject "spritekit-fragment-sandbox-ios-app" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -297,9 +339,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9BFCAF61F542788008FCF4E /* PixelShaderDemo */,
-				A9BFCB101F542788008FCF4E /* PixelShaderDemoTests */,
-				A9BFCB1B1F542788008FCF4E /* PixelShaderDemoUITests */,
+				A9BFCAF61F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */,
+				A9BFCB101F542788008FCF4E /* spritekit-fragment-sandbox-ios-appTests */,
+				A9BFCB1B1F542788008FCF4E /* spritekit-fragment-sandbox-ios-appUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -379,12 +421,12 @@
 /* Begin PBXTargetDependency section */
 		A9BFCB131F542788008FCF4E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A9BFCAF61F542788008FCF4E /* PixelShaderDemo */;
+			target = A9BFCAF61F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */;
 			targetProxy = A9BFCB121F542788008FCF4E /* PBXContainerItemProxy */;
 		};
 		A9BFCB1E1F542788008FCF4E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A9BFCAF61F542788008FCF4E /* PixelShaderDemo */;
+			target = A9BFCAF61F542788008FCF4E /* spritekit-fragment-sandbox-ios-app */;
 			targetProxy = A9BFCB1D1F542788008FCF4E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -522,10 +564,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = PixelShaderDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/spritekit-fragment-sandbox-ios-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = astemir.eleev.PixelShaderDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "astemir.eleev.spritekit-fragment-sandbox-ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,10 +580,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3K58FE38R;
-				INFOPLIST_FILE = PixelShaderDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/spritekit-fragment-sandbox-ios-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = astemir.eleev.PixelShaderDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "astemir.eleev.spritekit-fragment-sandbox-ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -561,7 +603,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixelShaderDemo.app/PixelShaderDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spritekit-fragment-sandbox-ios-app.app/spritekit-fragment-sandbox-ios-app";
 			};
 			name = Debug;
 		};
@@ -578,7 +620,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixelShaderDemo.app/PixelShaderDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spritekit-fragment-sandbox-ios-app.app/spritekit-fragment-sandbox-ios-app";
 			};
 			name = Release;
 		};
@@ -617,7 +659,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9BFCAF21F542788008FCF4E /* Build configuration list for PBXProject "PixelShaderDemo" */ = {
+		A9BFCAF21F542788008FCF4E /* Build configuration list for PBXProject "spritekit-fragment-sandbox-ios-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9BFCB231F542788008FCF4E /* Debug */,
@@ -626,7 +668,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9BFCB251F542788008FCF4E /* Build configuration list for PBXNativeTarget "PixelShaderDemo" */ = {
+		A9BFCB251F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9BFCB261F542788008FCF4E /* Debug */,
@@ -635,7 +677,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9BFCB281F542788008FCF4E /* Build configuration list for PBXNativeTarget "PixelShaderDemoTests" */ = {
+		A9BFCB281F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9BFCB291F542788008FCF4E /* Debug */,
@@ -644,7 +686,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9BFCB2B1F542788008FCF4E /* Build configuration list for PBXNativeTarget "PixelShaderDemoUITests" */ = {
+		A9BFCB2B1F542788008FCF4E /* Build configuration list for PBXNativeTarget "spritekit-fragment-sandbox-ios-appUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9BFCB2C1F542788008FCF4E /* Debug */,
