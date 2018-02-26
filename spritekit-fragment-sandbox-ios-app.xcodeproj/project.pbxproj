@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A931F06A2044370D009FA7A6 /* lcd_post_effect.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A931F0692044370D009FA7A6 /* lcd_post_effect.fsh */; };
+		A931F06D20444152009FA7A6 /* crt_retro.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A931F06C20444152009FA7A6 /* crt_retro.fsh */; };
 		A93BA65D1F5D2C1500F22CAF /* tri_lattice6.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A93BA65C1F5D2C1500F22CAF /* tri_lattice6.fsh */; };
 		A9A280931F55819900F57F8D /* wave.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A280921F55819900F57F8D /* wave.fsh */; };
 		A9A280961F55931F00F57F8D /* SKShader+UniformUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A280951F55931F00F57F8D /* SKShader+UniformUpdates.swift */; };
@@ -15,7 +17,6 @@
 		A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */; };
 		A9AC03BE2042C5D400FF8ACC /* GTC14-conference.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */; };
 		A9AC03D020430C4500FF8ACC /* pixel_shader_demo_001.gif in Resources */ = {isa = PBXBuildFile; fileRef = A9AC03CF20430C4500FF8ACC /* pixel_shader_demo_001.gif */; };
-		A9AC03D22043143300FF8ACC /* curvature-3d.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9AC03D12043143300FF8ACC /* curvature-3d.fsh */; };
 		A9AC03DD204315D400FF8ACC /* spritekit_fragment_sandbox_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC03DC204315D400FF8ACC /* spritekit_fragment_sandbox_ios_appTests.swift */; };
 		A9AC03EB204315E300FF8ACC /* spritekit_fragment_sandbox_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC03EA204315E300FF8ACC /* spritekit_fragment_sandbox_ios_appUITests.swift */; };
 		A9BA44651F5D61C50008BAE1 /* splash.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A9BA44641F5D61C50008BAE1 /* splash.fsh */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A931F0692044370D009FA7A6 /* lcd_post_effect.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lcd_post_effect.fsh; sourceTree = "<group>"; };
+		A931F06C20444152009FA7A6 /* crt_retro.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = crt_retro.fsh; sourceTree = "<group>"; };
 		A93BA65C1F5D2C1500F22CAF /* tri_lattice6.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = tri_lattice6.fsh; sourceTree = "<group>"; };
 		A9A280921F55819900F57F8D /* wave.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = wave.fsh; sourceTree = "<group>"; };
 		A9A280951F55931F00F57F8D /* SKShader+UniformUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKShader+UniformUpdates.swift"; sourceTree = "<group>"; };
@@ -61,7 +64,6 @@
 		A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = paint_noise.fsh; sourceTree = "<group>"; };
 		A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = "GTC14-conference.fsh"; sourceTree = "<group>"; };
 		A9AC03CF20430C4500FF8ACC /* pixel_shader_demo_001.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pixel_shader_demo_001.gif; sourceTree = "<group>"; };
-		A9AC03D12043143300FF8ACC /* curvature-3d.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = "curvature-3d.fsh"; sourceTree = "<group>"; };
 		A9AC03DA204315D400FF8ACC /* spritekit-fragment-sandbox-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-fragment-sandbox-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9AC03DC204315D400FF8ACC /* spritekit_fragment_sandbox_ios_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spritekit_fragment_sandbox_ios_appTests.swift; sourceTree = "<group>"; };
 		A9AC03DE204315D400FF8ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +114,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A931F06E2044438D009FA7A6 /* Filters-Effects */ = {
+			isa = PBXGroup;
+			children = (
+				A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */,
+				A9BFCB301F54391A008FCF4E /* water_reflection.fsh */,
+				A9A280921F55819900F57F8D /* wave.fsh */,
+				A931F0692044370D009FA7A6 /* lcd_post_effect.fsh */,
+				A931F06C20444152009FA7A6 /* crt_retro.fsh */,
+			);
+			path = "Filters-Effects";
+			sourceTree = "<group>";
+		};
+		A931F06F204443D7009FA7A6 /* Fractals */ = {
+			isa = PBXGroup;
+			children = (
+				A9D160302042BF87003722C8 /* mandelbrot-recursive.fsh */,
+				A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */,
+			);
+			path = Fractals;
+			sourceTree = "<group>";
+		};
+		A931F070204443E3009FA7A6 /* Procedural */ = {
+			isa = PBXGroup;
+			children = (
+				A9A280991F55975500F57F8D /* lightning.fsh */,
+				A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */,
+				A93BA65C1F5D2C1500F22CAF /* tri_lattice6.fsh */,
+				A9BA44641F5D61C50008BAE1 /* splash.fsh */,
+				A9E1D512204179F300CBD08F /* tron_road.fsh */,
+			);
+			path = Procedural;
+			sourceTree = "<group>";
+		};
+		A931F0712044440C009FA7A6 /* Raymarching */ = {
+			isa = PBXGroup;
+			children = (
+				A9E938B31F56FF44002229EF /* flame_raymarching.fsh */,
+			);
+			path = Raymarching;
+			sourceTree = "<group>";
+		};
 		A9A280941F5592D700F57F8D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,18 +273,10 @@
 		A9BFCB2E1F543906008FCF4E /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				A9BFCB2F1F54391A008FCF4E /* water_movement.fsh */,
-				A9BFCB301F54391A008FCF4E /* water_reflection.fsh */,
-				A9A280921F55819900F57F8D /* wave.fsh */,
-				A9A280991F55975500F57F8D /* lightning.fsh */,
-				A9A2809D1F55ABE400F57F8D /* paint_noise.fsh */,
-				A9E938B31F56FF44002229EF /* flame_raymarching.fsh */,
-				A93BA65C1F5D2C1500F22CAF /* tri_lattice6.fsh */,
-				A9BA44641F5D61C50008BAE1 /* splash.fsh */,
-				A9E1D512204179F300CBD08F /* tron_road.fsh */,
-				A9D160302042BF87003722C8 /* mandelbrot-recursive.fsh */,
-				A9AC03BD2042C5D400FF8ACC /* GTC14-conference.fsh */,
-				A9AC03D12043143300FF8ACC /* curvature-3d.fsh */,
+				A931F0712044440C009FA7A6 /* Raymarching */,
+				A931F070204443E3009FA7A6 /* Procedural */,
+				A931F06F204443D7009FA7A6 /* Fractals */,
+				A931F06E2044438D009FA7A6 /* Filters-Effects */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -373,10 +408,11 @@
 				A9BFCB341F543CB0008FCF4E /* water_reflection.fsh in Resources */,
 				A9BFCB061F542788008FCF4E /* Main.storyboard in Resources */,
 				A9D160312042BF87003722C8 /* mandelbrot-recursive.fsh in Resources */,
+				A931F06A2044370D009FA7A6 /* lcd_post_effect.fsh in Resources */,
 				A9BFCAFD1F542788008FCF4E /* GameScene.sks in Resources */,
+				A931F06D20444152009FA7A6 /* crt_retro.fsh in Resources */,
 				A9A2809E1F55ABE400F57F8D /* paint_noise.fsh in Resources */,
 				A9E938B41F56FF44002229EF /* flame_raymarching.fsh in Resources */,
-				A9AC03D22043143300FF8ACC /* curvature-3d.fsh in Resources */,
 				A9BFCB081F542788008FCF4E /* Assets.xcassets in Resources */,
 				A9BA44651F5D61C50008BAE1 /* splash.fsh in Resources */,
 				A9AC03D020430C4500FF8ACC /* pixel_shader_demo_001.gif in Resources */,
