@@ -92,6 +92,8 @@ class GameScene: SKScene {
     
     // MARK: - Methods
     
+    // MARK: - Control methods
+    
     @discardableResult func updateReflectionIterations(for value: Float) -> Bool? {
         return shaderContainer?.shader?.updateUniform(named: "iterations", for: value)
     }
@@ -111,6 +113,8 @@ class GameScene: SKScene {
     @discardableResult func updateGTC14(for value: Float) -> Bool? {
         return shaderContainer?.shader?.updateUniform(named: "iterations", for: value)
     }
+    
+    // MARK: - Container methods
     
     func waterReflection() {
         let shaderContainerMovement = createShaderContainer()
@@ -163,6 +167,11 @@ class GameScene: SKScene {
     func gtc14() {
         shaderContainer = createShaderContainer()
         createGTC14(shaderContainer!)
+    }
+    
+    func LCDPostEffect() {
+        shaderContainer = createShaderContainer()
+        createLCDPostEffect(shaderContainer!)
     }
     
     // MARK: - Utility
@@ -312,6 +321,18 @@ class GameScene: SKScene {
         shaderContainer.shader = tronRoadShader
     }
     
+    private func createLCDPostEffect(_ shaderContainer: SKSpriteNode, for imageNamed: String = "retro.jpg") {
+        let size = getSceneResolution()
+        
+        let waterShader = SKShader(fileNamed: "lcd_post_effect.fsh")
+        waterShader.uniforms = [
+            SKUniform(name: "u_resolution", vectorFloat3: size),
+            SKUniform(name: "u_texture0", texture: SKTexture(imageNamed: imageNamed))
+        ]
+        shaderContainer.shader = waterShader
+    }
+    
+    // MARK: - Utility methods
     
     private func getSceneResolution(multiplier: CGFloat = 1.0) -> float3 {
         let width = Float(self.frame.size.width * multiplier)

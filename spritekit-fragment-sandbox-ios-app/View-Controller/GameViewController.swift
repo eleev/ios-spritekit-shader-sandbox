@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-enum Scene {
+enum SceneTypes {
     typealias ShaderUniformRange = (min: Float, max: Float)
     
     case rgbLighning
@@ -23,6 +23,7 @@ enum Scene {
     case tron_road
     case mandelbrot_recursive
     case gtc14
+    case anisotropic_blur
     case none
     
     func shaderRange() -> ShaderUniformRange {
@@ -49,6 +50,8 @@ enum Scene {
             return (min: 0, max: 100)
         case .gtc14:
             return (min: 0, max: 100)
+        case .anisotropic_blur:
+            return (min: 0, max: 50)
         }
     }
 }
@@ -62,7 +65,7 @@ class GameViewController: UIViewController {
     // MARK: - Properties
     
     var scene: GameScene?
-    var currentScene: Scene = .none {
+    var currentScene: SceneTypes = .none {
         didSet {
             // requires implementation
         }
@@ -95,11 +98,15 @@ class GameViewController: UIViewController {
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
-//        if UIDevice.current.userInterfaceIdiom == .phone {
-//            return .allButUpsideDown
-//        } else {
-//            return .all
-//        }
+
+        // Used for cases when separete interface orientations are supported for differetn types of devices e.g. iPhone or iPad for instance
+        /*
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .allButUpsideDown
+        } else {
+            return .all
+        }
+         */
     }
 
     override var prefersStatusBarHidden: Bool {
@@ -125,6 +132,8 @@ class GameViewController: UIViewController {
             scene?.updateMandelbrotIterations(for: value)
         case .gtc14:
             scene?.updateGTC14(for: value)
+        case .anisotropic_blur:
+            fallthrough
         case .tron_road:
             fallthrough
         case .water:
@@ -199,6 +208,12 @@ class GameViewController: UIViewController {
         scene?.removeAllActions()
         scene?.gtc14()
         currentScene = .gtc14
+    }
+    
+    @IBAction func LCDPostEffect(_ sender: UIButton) {
+        scene?.removeAllActions()
+        scene?.LCDPostEffect()
+        currentScene = .anisotropic_blur
     }
 }
 
