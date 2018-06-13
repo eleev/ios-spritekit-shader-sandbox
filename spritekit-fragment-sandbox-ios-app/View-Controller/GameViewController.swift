@@ -23,7 +23,8 @@ enum SceneTypes {
     case tron_road
     case mandelbrot_recursive
     case gtc14
-    case anisotropic_blur
+    case ldc_post_effect
+    case crt_retro_effect
     case none
     
     func shaderRange() -> ShaderUniformRange {
@@ -50,8 +51,10 @@ enum SceneTypes {
             return (min: 0, max: 100)
         case .gtc14:
             return (min: 0, max: 100)
-        case .anisotropic_blur:
-            return (min: 0, max: 50)
+        case .ldc_post_effect:
+            return (min: 0, max: 20)
+        case .crt_retro_effect:
+            return (min: -2, max: 10)
         }
     }
 }
@@ -91,24 +94,24 @@ class GameViewController: UIViewController {
         skView.showsFPS = true
         skView.showsNodeCount = true
     }
-
+    
     override var shouldAutorotate: Bool {
         return true
     }
-
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
-
+        
         // Used for cases when separete interface orientations are supported for differetn types of devices e.g. iPhone or iPad for instance
         /*
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
+         if UIDevice.current.userInterfaceIdiom == .phone {
+         return .allButUpsideDown
+         } else {
+         return .all
+         }
          */
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -132,8 +135,10 @@ class GameViewController: UIViewController {
             scene?.updateMandelbrotIterations(for: value)
         case .gtc14:
             scene?.updateGTC14(for: value)
-        case .anisotropic_blur:
-            fallthrough
+        case .crt_retro_effect:
+            scene?.updateCRTRetroEffect(for: value)
+        case .ldc_post_effect:
+            scene?.updateLCDPostEffect(for: value)
         case .tron_road:
             fallthrough
         case .water:
@@ -144,7 +149,7 @@ class GameViewController: UIViewController {
             fallthrough
         case .none:
             break
-        
+            
         }
     }
     
@@ -205,15 +210,21 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func gtc14(_ sender: UIButton) {
-        scene?.removeAllActions()
+        scene?.removeAllChildren()
         scene?.gtc14()
         currentScene = .gtc14
     }
     
     @IBAction func LCDPostEffect(_ sender: UIButton) {
-        scene?.removeAllActions()
+        scene?.removeAllChildren()
         scene?.LCDPostEffect()
-        currentScene = .anisotropic_blur
+        currentScene = .ldc_post_effect
+    }
+    
+    @IBAction func CRTRetroEffect(_ sender: UIButton) {
+        scene?.removeAllChildren()
+        scene?.CRTretroEffect()
+        currentScene = .crt_retro_effect
     }
 }
 
