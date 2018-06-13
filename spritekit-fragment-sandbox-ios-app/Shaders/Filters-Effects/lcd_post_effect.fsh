@@ -18,7 +18,7 @@ void main(void) {
     else lcdColor.b = 1.0;
     
     // Darken every 3rd horizontal strip for scanline
-    float sclV = 0.25;
+    float sclV = u_color_darkening;
     if (int(mod(gl_FragCoord.y,3.0)) == 0) lcdColor.rgb = vec3(sclV,sclV,sclV);
     
     

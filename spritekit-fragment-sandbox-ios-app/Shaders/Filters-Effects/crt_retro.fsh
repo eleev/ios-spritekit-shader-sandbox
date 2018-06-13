@@ -7,7 +7,8 @@ void main(void) {
     // scale to per pixel
     float o  = f * (0.35 / 320.0);
     // scale for subtle effect
-    float s  = f * .03 + 0.97;
+    // 0.97
+    float s  = f * .03 + u_color_scale;
     // scan line fading
     float l  = sin( u_time * 32. )*.03 + 0.97;
     // sample in 3 colour offset
@@ -17,4 +18,3 @@ void main(void) {
     // combine as
     gl_FragColor = vec4( r*0.7, g, b*0.9, l)*l*s;
 }
-
