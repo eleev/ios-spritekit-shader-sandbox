@@ -18,23 +18,23 @@ class GameScene: SKScene {
     
     // MARK: - Lifecycle
     
-    override func didMove(to view: SKView) {        
-
-        createNode(for: "sand")
-
-        /*
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+    override func didMove(to view: SKView) {
         
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
+        createNode(for: "sand")
+        
+        /*
+         // Create shape node to use during mouse interaction
+         let w = (self.size.width + self.size.height) * 0.05
+         self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+         
+         if let spinnyNode = self.spinnyNode {
+         spinnyNode.lineWidth = 2.5
+         
+         spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
+         spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
+         SKAction.fadeOut(withDuration: 0.5),
+         SKAction.removeFromParent()]))
+         }
          */
     }
     
@@ -88,7 +88,7 @@ class GameScene: SKScene {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
- 
+    
     
     // MARK: - Methods
     
@@ -114,6 +114,14 @@ class GameScene: SKScene {
         return shaderContainer?.shader?.updateUniform(named: "iterations", for: value)
     }
     
+    @discardableResult func updateCRTRetroEffect(for value: Float) -> Bool? {
+        return shaderContainer?.shader?.updateUniform(named: "u_color_scale", for: value)
+    }
+    
+    @discardableResult func updateLCDPostEffect(for value: Float) -> Bool? {
+        return shaderContainer?.shader?.updateUniform(named: "u_color_darkening", for: value)
+    }
+    
     // MARK: - Container methods
     
     func waterReflection() {
@@ -123,7 +131,7 @@ class GameScene: SKScene {
         shaderContainer = createShaderContainer()
         createReflectionShader(shaderContainer!)
     }
-
+    
     func waterMovement() {
         shaderContainer = createShaderContainer()
         createWaveShader(shaderContainer!)
@@ -172,6 +180,11 @@ class GameScene: SKScene {
     func LCDPostEffect() {
         shaderContainer = createShaderContainer()
         createLCDPostEffect(shaderContainer!)
+    }
+    
+    func CRTretroEffect() {
+        shaderContainer = createShaderContainer()
+        createCRTRetroEffect(shaderContainer!)
     }
     
     // MARK: - Utility
@@ -327,7 +340,20 @@ class GameScene: SKScene {
         let waterShader = SKShader(fileNamed: "lcd_post_effect.fsh")
         waterShader.uniforms = [
             SKUniform(name: "u_resolution", vectorFloat3: size),
-            SKUniform(name: "u_texture0", texture: SKTexture(imageNamed: imageNamed))
+            SKUniform(name: "u_texture0", texture: SKTexture(imageNamed: imageNamed)),
+            SKUniform(name: "u_color_darkening", float: 0.25)
+        ]
+        shaderContainer.shader = waterShader
+    }
+    
+    private func createCRTRetroEffect(_ shaderContainer: SKSpriteNode, for imageNamed: String = "retro.jpg") {
+        let size = getSceneResolution()
+        
+        let waterShader = SKShader(fileNamed: "crt_retro.fsh")
+        waterShader.uniforms = [
+            SKUniform(name: "u_resolution", vectorFloat3: size),
+            SKUniform(name: "u_texture0", texture: SKTexture(imageNamed: imageNamed)),
+            SKUniform(name: "u_color_scale", float: 1.27)
         ]
         shaderContainer.shader = waterShader
     }
