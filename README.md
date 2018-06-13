@@ -6,7 +6,13 @@
 
 
 # SpriteKit Fragment Sandbox
-An `iOS` project demonstrating how to use `GLSL` Shaders with `SpriteKit` framework 👾. The purpose of the app is to serve as a sandbox that allows to quicly prototype and experiment with `fragment`  shaders. More shaders will be added on a regular basis.
+An `iOS` project demonstrating how to use `GLSL` Shaders with `SpriteKit` framework 👾. The purpose of the app is to serve as a sandbox that allows to quicly prototype and experiment with `fragment`  shaders. Currently there are **`12`** custom `fragment shaders`. More shaders will be added on a regular basis.
+
+## CRT Effect
+<img src="https://user-images.githubusercontent.com/5098753/41338402-c37c847e-6efa-11e8-93e2-8d6fb709e697.gif" width="350">
+
+## LCD Effect 
+<img src="https://user-images.githubusercontent.com/5098753/41338403-c39c791e-6efa-11e8-80c9-3929a4e0dabe.gif" width="350">
 
 ## GTC14
 <img src="https://user-images.githubusercontent.com/5098753/36643373-6513562c-1a5b-11e8-9ba5-9fb98bdc3ceb.gif" width="350">
