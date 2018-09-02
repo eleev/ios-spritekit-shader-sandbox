@@ -1,3 +1,5 @@
+# ios-spritekit-shader-sandbox [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
 [![Platform](https://img.shields.io/badge/platform-iOS-yellow.svg)]()
 [![Language](https://img.shields.io/badge/language-swift-orange.svg)]()
 [![SecondaryLanguage](https://img.shields.io/badge/language-GLSL-red.svg)]()
@@ -5,13 +7,12 @@
 [![Framework](https://img.shields.io/badge/frameworks-SpriteKit-ff69b4.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
+**Last Update: 02/September/2018.**
 
-# SpriteKit Shader Sandbox [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-
-**Last Update: 18/August/2018.**
-
-# About
+# ✍️ About
 An `iOS` project demonstrating how to use `GLSL` and `Metal` Shaders with `SpriteKit` framework 👾. The purpose of the app is to serve as a sandbox that allows to quicly prototype and experiment with `fragment`  shaders. Currently there are **`12`** custom `fragment shaders`. More shaders will be added on a regular basis.
+
+# 📝 List of Shaders
 
 ## CRT Effect
 <img src="https://user-images.githubusercontent.com/5098753/41338402-c37c847e-6efa-11e8-93e2-8d6fb709e697.gif" width="350">
@@ -46,10 +47,8 @@ An `iOS` project demonstrating how to use `GLSL` and `Metal` Shaders with `Sprit
 ## Water Reflections
 <img src="https://user-images.githubusercontent.com/5098753/29831536-1b583f48-8cee-11e7-88ad-d0c57f33139d.gif" width="350">
 
-# Author
+# 👨‍💻 Author
 [Astemir Eleev](https://github.com/jVirus)
 
-# Licence 
-
+# 🔖 Licence 
 `ios-spritekit-shader-sandbox` is available under the `MIT` license. See the [LICENSE](https://github.com/jVirus/ios-spritekit-shader-sandbox/blob/master/LICENSE) file for more info.
-
