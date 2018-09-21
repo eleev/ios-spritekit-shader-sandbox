@@ -9,6 +9,8 @@
 
 **Last Update: 21/September/2018.**
 
+![](logo-spritekit_shadertoy.png)
+
 # ✍️ About
 An `iOS` project demonstrating how to use `GLSL` and `Metal` Shaders with `SpriteKit` framework 👾. The purpose of the app is to serve as a sandbox that allows to quicly prototype and experiment with `fragment`  shaders. Currently there are **`12`** custom `fragment shaders`. More shaders will be added on a regular basis.
 
