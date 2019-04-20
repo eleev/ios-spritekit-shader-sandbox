@@ -378,7 +378,7 @@ class GameScene: SKScene {
 
 extension Float {
     static func randomFloat(min: Float, max: Float) -> Float {
-        return (Float(arc4random()) / 0xFFFFFFFF) * (max - min) + min
+        return (Float(arc4random()) / 4294967296 /* 0xFFFFFFFF */) * (max - min) + min
     }
 }
 
