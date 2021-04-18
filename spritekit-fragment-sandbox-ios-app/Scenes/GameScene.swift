@@ -55,7 +55,7 @@ class GameScene: SKScene {
         let positionX = clamp(value: position.x / 100)
         let positionY = clamp(value: position.y / 500)
         
-        let point = float2([Float(positionX), Float(positionY)])
+        let point = SIMD2<Float>([Float(positionX), Float(positionY)])
         shaderContainer?.shader?.updateUniform(named: "finger", for: point)
         
         debugPrint("finger position: ", positionX, positionY)
@@ -252,7 +252,7 @@ class GameScene: SKScene {
     
     private func createPaintNoiseShader(_ shaderContainer: SKSpriteNode) {
         let size = getSceneResolution()
-        let finger = float2([0.23, 0.1])
+        let finger = SIMD2<Float>([0.23, 0.1])
         
         let paintNoiseShader = SKShader(fileNamed: "paint_noise.fsh")
         paintNoiseShader.uniforms = [
@@ -286,7 +286,7 @@ class GameScene: SKScene {
     
     private func createSplashShader(_ shaderContainer: SKSpriteNode, for imageNamed: String = "sand.png") {
         let size = getSceneResolution()
-        let u_date = float4([0, 0, 0, Float(arc4random_uniform(70) + 1)])
+        let u_date = SIMD4<Float>([0, 0, 0, Float(arc4random_uniform(70) + 1)])
         
         let splashShader = SKShader(fileNamed: "splash.fsh")
         splashShader.uniforms = [
@@ -360,10 +360,10 @@ class GameScene: SKScene {
     
     // MARK: - Utility methods
     
-    private func getSceneResolution(multiplier: CGFloat = 1.0) -> float3 {
+    private func getSceneResolution(multiplier: CGFloat = 1.0) -> SIMD3<Float> {
         let width = Float(self.frame.size.width * multiplier)
         let height = Float(self.frame.size.height * multiplier)
-        let size = float3([width, height, 0])
+        let size = SIMD3<Float>([width, height, 0])
         return size
     }
     
